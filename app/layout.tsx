@@ -29,7 +29,7 @@ const DEFAULT_OG_IMAGE =
 // site's own GA4 property ID before launch. Do not reuse another site's
 // ID or you'll mix both sites' traffic together (see README "Before you
 // launch").
-const GA_MEASUREMENT_ID = "G-XXXXXXXXXX";
+const GA_MEASUREMENT_ID = "G-8WV26RP73S";
 
 const organizationJsonLd = {
   "@context": "https://schema.org",

@@ -82,11 +82,12 @@ you have them — nothing beats real photos of the actual experience.
 
 A few placeholders need your own real values before this goes live:
 
-- `lib/site.ts` → `SITE_URL` — set to whatever domain you actually connect
-  in Vercel (currently a placeholder, `daytripsfromdublin.com`).
-- `app/layout.tsx` → the `G-XXXXXXXXXX` Google Analytics ID (two spots) —
-  replace with this site's own GA4 measurement ID. Don't reuse another
-  site's ID, or you'll mix both sites' traffic together.
+- `lib/site.ts` → `SITE_URL` — set to `https://www.daytrips-from-dublin.com`
+  (the site's real domain). Make sure this domain is actually connected in
+  Vercel before launch.
+- `app/layout.tsx` → the GA4 measurement ID is already set to
+  `G-8WV26RP73S` for this site. Don't reuse another site's ID, or you'll
+  mix both sites' traffic together.
 - `.env` → `ADMIN_EMAIL` / `ADMIN_PASSWORD` / `ADMIN_SESSION_SECRET` /
   `DATABASE_URL` / `GYG_PARTNER_ID` / `BLOB_STORE_ID` /
   `BLOB_READ_WRITE_TOKEN` (see the comments in that file).
