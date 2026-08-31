@@ -31,8 +31,8 @@ export default function HeaderNav({ links }: { links?: NavLink[] }) {
             aria-current={isActive ? "page" : undefined}
             className={`relative py-1 text-[14px] font-semibold transition-colors ${
               isActive
-                ? "text-[#C58A2B] after:absolute after:bottom-[-6px] after:left-0 after:right-0 after:h-[2.5px] after:rounded-full after:bg-[#C58A2B]"
-                : "text-[#26332D]/90 hover:text-[#073B2A]"
+                ? "text-[#075E4A] after:absolute after:bottom-[-6px] after:left-0 after:right-0 after:h-[2.5px] after:rounded-full after:bg-[#D9A441]"
+                : "text-[#102A43]/85 hover:text-[#075E4A]"
             }`}
           >
             {link.label}

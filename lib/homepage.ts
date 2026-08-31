@@ -147,6 +147,11 @@ export interface CtaBannerSection {
   buttonHref: string;
 }
 
+export interface HeroStatItem {
+  value: string;
+  label: string;
+}
+
 export interface HomepageSections {
   tours: TourSection;
   highlights: HighlightsSection;
@@ -159,6 +164,7 @@ export interface HomepageSections {
   notFound: NotFoundSection;
   blogTeaser: BlogTeaserSection;
   blogPage: BlogPageSection;
+  heroStats: HeroStatItem[];
 }
 
 export interface HeaderContent {
@@ -270,10 +276,10 @@ export const DEFAULT_FOOTER: FooterContent = {
 };
 
 export const DEFAULT_THEME: ThemeColors = {
-  primary: "#0F7A4A",   // Emerald Green ⭐
-  secondary: "#C9A227", // Celtic Gold ⭐
-  dark: "#0B2E23",      // Deep Forest
-  accent: "#1B7A5A",    // Shamrock (hover/lighter accent)
+  primary: "#075E4A",   // Irish Forest Green ⭐
+  secondary: "#D9A441", // Irish Gold ⭐
+  dark: "#0D4F43",      // Deep Emerald ⭐
+  accent: "#075E4A",    // Primary Accent
 };
 
 export const DEFAULT_SECTIONS: HomepageSections = {
@@ -452,6 +458,12 @@ export const DEFAULT_SECTIONS: HomepageSections = {
     sidebarCompareLinkText: "Compare all tours & tickets →",
     promoRecommendedText: "Recommended for you",
   },
+  heroStats: [
+    { value: "10,000+", label: "Happy Travelers" },
+    { value: "4.8/5", label: "Average Rating" },
+    { value: "30+", label: "Amazing Destinations" },
+    { value: "Unforgettable", label: "Memories Await" },
+  ],
 };
 
 const DEFAULT_HOMEPAGE_CONTENT: HomepageContent = {
@@ -544,6 +556,9 @@ function rowToHomepage(row: any): HomepageContent {
       notFound: { ...DEFAULT_SECTIONS.notFound, ...sectionsRaw.notFound },
       blogTeaser: { ...DEFAULT_SECTIONS.blogTeaser, ...sectionsRaw.blogTeaser },
       blogPage: { ...DEFAULT_SECTIONS.blogPage, ...sectionsRaw.blogPage },
+      heroStats: Array.isArray(sectionsRaw.heroStats) && sectionsRaw.heroStats.length > 0
+        ? sectionsRaw.heroStats
+        : DEFAULT_SECTIONS.heroStats,
     },
     header: parseJsonWithDefault<HeaderContent>(row.header_json, DEFAULT_HEADER),
     footer: parseJsonWithDefault<FooterContent>(row.footer_json, DEFAULT_FOOTER),

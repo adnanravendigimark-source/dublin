@@ -7,10 +7,10 @@ export default async function CtaBanner() {
   return (
     <section className="py-14 sm:py-16 bg-[#F8F5EC]">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <div className="relative overflow-hidden rounded-2xl bg-[#073B2A] px-6 py-8 sm:px-10 sm:py-10 shadow-xl shadow-black/15 border border-white/10">
-          {/* Subtle gold pyramid watermarks */}
+        <div className="relative overflow-hidden rounded-2xl bg-[#0D4F43] px-6 py-8 sm:px-10 sm:py-10 shadow-xl shadow-black/15 border border-white/10">
+          {/* Subtle gold shamrock watermarks */}
           <div className="pointer-events-none absolute -left-10 -bottom-10 h-56 w-56 opacity-10">
-            <svg viewBox="0 0 100 100" fill="none" stroke="#C58A2B" strokeWidth="2" className="h-full w-full">
+            <svg viewBox="0 0 100 100" fill="none" stroke="#D9A441" strokeWidth="2" className="h-full w-full">
               <path d="M10 80L50 20L90 80Z" />
               <path d="M25 60H75M35 45H65" />
             </svg>
@@ -19,7 +19,7 @@ export default async function CtaBanner() {
           <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6">
             {/* Left Content */}
             <div className="flex items-center gap-4 sm:gap-5">
-              <div className="hidden sm:flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white/10 text-[#C58A2B] border border-white/15">
+              <div className="hidden sm:flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white/10 text-[#D9A441] border border-white/15">
                 <svg
                   viewBox="0 0 24 24"
                   fill="none"
@@ -45,7 +45,7 @@ export default async function CtaBanner() {
             {/* Right Action Button */}
             <a
               href={s.buttonHref}
-              className="group inline-flex shrink-0 items-center justify-center gap-2 rounded-lg bg-[#C58A2B] px-7 py-3 text-xs font-bold uppercase tracking-wider text-[#073B2A] shadow-md transition-all hover:bg-[#D9A441] hover:shadow-lg hover:-translate-y-0.5"
+              className="group inline-flex shrink-0 items-center justify-center gap-2 rounded-lg bg-[#D9A441] px-7 py-3 text-xs font-bold uppercase tracking-wider text-[#0D4F43] shadow-md transition-all hover:bg-[#E5BA5D] hover:shadow-lg hover:-translate-y-0.5"
             >
               <span>{s.buttonText}</span>
               <span className="transition-transform group-hover:translate-x-1">→</span>
@@ -56,3 +56,4 @@ export default async function CtaBanner() {
     </section>
   );
 }
+

@@ -248,6 +248,28 @@ export default function HomepageForm({ initial, tours }: { initial: HomepageCont
     setSaved(false);
   }
 
+  function updateHeroStat(index: number, field: "value" | "label", val: string) {
+    setContent((c) => {
+      const current = Array.isArray(c.sections.heroStats) && c.sections.heroStats.length > 0
+        ? [...c.sections.heroStats]
+        : [
+            { value: "10,000+", label: "Happy Travelers" },
+            { value: "4.8/5", label: "Average Rating" },
+            { value: "30+", label: "Amazing Destinations" },
+            { value: "Unforgettable", label: "Memories Await" },
+          ];
+      while (current.length <= index) {
+        current.push({ value: "", label: "" });
+      }
+      current[index] = { ...current[index], [field]: val };
+      return {
+        ...c,
+        sections: { ...c.sections, heroStats: current },
+      };
+    });
+    setSaved(false);
+  }
+
   function updateBlogPage(patch: Partial<HomepageContent["sections"]["blogPage"]>) {
     setContent((c) => ({
       ...c,
@@ -420,6 +442,108 @@ export default function HomepageForm({ initial, tours }: { initial: HomepageCont
               <Field label="Secondary button link">
                 <input value={content.heroCtaSecondaryHref} onChange={(e) => update("heroCtaSecondaryHref", e.target.value)} className={inputClass} />
               </Field>
+            </div>
+
+            {/* Hero Stats Bar Fields */}
+            <div className="mt-6 border-t border-stone-200 pt-6">
+              <h3 className="text-sm font-bold text-stone-800">Hero Stats Bar (Bottom Bar)</h3>
+              <p className="mt-0.5 text-xs text-stone-500">
+                The 4 statistics displayed across the bottom of the hero section.
+              </p>
+
+              <div className="mt-4 grid gap-4 sm:grid-cols-2">
+                {/* Stat 1 */}
+                <div className="rounded-lg border border-stone-200 bg-stone-50/50 p-3 space-y-2">
+                  <span className="text-xs font-bold text-[#075E4A]">Stat 1 (e.g. Happy Travelers)</span>
+                  <div className="grid gap-2 sm:grid-cols-2">
+                    <Field label="Value">
+                      <input
+                        value={content.sections.heroStats?.[0]?.value ?? "10,000+"}
+                        onChange={(e) => updateHeroStat(0, "value", e.target.value)}
+                        placeholder="10,000+"
+                        className={inputClass}
+                      />
+                    </Field>
+                    <Field label="Label">
+                      <input
+                        value={content.sections.heroStats?.[0]?.label ?? "Happy Travelers"}
+                        onChange={(e) => updateHeroStat(0, "label", e.target.value)}
+                        placeholder="Happy Travelers"
+                        className={inputClass}
+                      />
+                    </Field>
+                  </div>
+                </div>
+
+                {/* Stat 2 */}
+                <div className="rounded-lg border border-stone-200 bg-stone-50/50 p-3 space-y-2">
+                  <span className="text-xs font-bold text-[#075E4A]">Stat 2 (e.g. Rating)</span>
+                  <div className="grid gap-2 sm:grid-cols-2">
+                    <Field label="Value">
+                      <input
+                        value={content.sections.heroStats?.[1]?.value ?? "4.8/5"}
+                        onChange={(e) => updateHeroStat(1, "value", e.target.value)}
+                        placeholder="4.8/5"
+                        className={inputClass}
+                      />
+                    </Field>
+                    <Field label="Label">
+                      <input
+                        value={content.sections.heroStats?.[1]?.label ?? "Average Rating"}
+                        onChange={(e) => updateHeroStat(1, "label", e.target.value)}
+                        placeholder="Average Rating"
+                        className={inputClass}
+                      />
+                    </Field>
+                  </div>
+                </div>
+
+                {/* Stat 3 */}
+                <div className="rounded-lg border border-stone-200 bg-stone-50/50 p-3 space-y-2">
+                  <span className="text-xs font-bold text-[#075E4A]">Stat 3 (e.g. Destinations)</span>
+                  <div className="grid gap-2 sm:grid-cols-2">
+                    <Field label="Value">
+                      <input
+                        value={content.sections.heroStats?.[2]?.value ?? "30+"}
+                        onChange={(e) => updateHeroStat(2, "value", e.target.value)}
+                        placeholder="30+"
+                        className={inputClass}
+                      />
+                    </Field>
+                    <Field label="Label">
+                      <input
+                        value={content.sections.heroStats?.[2]?.label ?? "Amazing Destinations"}
+                        onChange={(e) => updateHeroStat(2, "label", e.target.value)}
+                        placeholder="Amazing Destinations"
+                        className={inputClass}
+                      />
+                    </Field>
+                  </div>
+                </div>
+
+                {/* Stat 4 */}
+                <div className="rounded-lg border border-stone-200 bg-stone-50/50 p-3 space-y-2">
+                  <span className="text-xs font-bold text-[#075E4A]">Stat 4 (e.g. Memories)</span>
+                  <div className="grid gap-2 sm:grid-cols-2">
+                    <Field label="Value">
+                      <input
+                        value={content.sections.heroStats?.[3]?.value ?? "Unforgettable"}
+                        onChange={(e) => updateHeroStat(3, "value", e.target.value)}
+                        placeholder="Unforgettable"
+                        className={inputClass}
+                      />
+                    </Field>
+                    <Field label="Label">
+                      <input
+                        value={content.sections.heroStats?.[3]?.label ?? "Memories Await"}
+                        onChange={(e) => updateHeroStat(3, "label", e.target.value)}
+                        placeholder="Memories Await"
+                        className={inputClass}
+                      />
+                    </Field>
+                  </div>
+                </div>
+              </div>
             </div>
           </SectionCard>
 

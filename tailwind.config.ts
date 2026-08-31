@@ -8,53 +8,59 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Day Trips from Dublin — Emerald/Gold Irish palette. Class names
-        // below (stone/gold/emerald/maya/chichen/navy) are unchanged from
-        // the Chichen Itza repo this project was cloned from — renaming
-        // those identifiers is a purely cosmetic, zero-visual-effect
-        // change across 50+ files, so only the color VALUES were updated.
+        // Irish Coastal Adventure Palette
+        irish: {
+          forest: "#075E4A",  // Irish Forest Green ⭐ (Primary brand, CTAs, buttons)
+          emerald: "#0D4F43", // Deep Emerald (Headings, footer, dark sections)
+          cream: "#F8F5EC",   // Warm Cream ⭐ (Main background)
+          mist: "#DDEBE8",    // Atlantic Mist (Light sections, cards)
+          gold: "#D9A441",    // Irish Gold (Highlights, icons, accents)
+          sage: "#C9D9CC",    // Soft Sage (Secondary UI/backgrounds)
+          navy: "#102A43",    // Deep Navy (Main text)
+          white: "#FFFFFF",   // White
+        },
         stone: {
-          50: "#FAFAF6",   // Warm Ivory
-          100: "#F2F0E8",
-          200: "#E4E0D0",  // Warm Sand
-          800: "#26332D",
-          900: "#1B2B26",  // Charcoal Green
+          50: "#F8F5EC",   // Warm Cream
+          100: "#DDEBE8",  // Atlantic Mist
+          200: "#C9D9CC",  // Soft Sage
+          800: "#102A43",  // Deep Navy
+          900: "#102A43",  // Deep Navy
         },
         gold: {
-          400: "#D9B53D",
-          500: "#C9A227",  // Celtic Gold ⭐
-          600: "#A8841C",
+          400: "#E5BA5D",
+          500: "#D9A441",  // Irish Gold ⭐
+          600: "#B88424",
         },
         emerald: {
-          900: "#0B2E23",  // Deep Forest ⭐
-          800: "#0F7A4A",  // Emerald Green
-          700: "#1B7A5A",  // Shamrock
+          900: "#0D4F43",  // Deep Emerald ⭐
+          800: "#075E4A",  // Irish Forest Green ⭐
+          700: "#0A755C",
         },
         maya: {
           forest: "rgb(var(--color-maya-forest) / <alpha-value>)",
           jungle: "rgb(var(--color-maya-jungle) / <alpha-value>)",
           ivory: "rgb(var(--color-maya-ivory) / <alpha-value>)",
           gold: "rgb(var(--color-maya-gold) / <alpha-value>)",
-          sand: "#E4E0D0",
-          sage: "#DCEAE3",
+          sand: "#DDEBE8",
+          sage: "#C9D9CC",
           charcoal: "rgb(var(--color-maya-charcoal) / <alpha-value>)",
           white: "#FFFFFF",
           emerald: "rgb(var(--color-maya-emerald) / <alpha-value>)",
-          dark: "#0B2E23",
+          dark: "#0D4F43",
         },
         // Compatibility aliases for site components
         chichen: {
           navy: "rgb(var(--color-maya-forest) / <alpha-value>)",
-          ottoman: "#1B7A5A",
+          ottoman: "#075E4A",
           gold: "rgb(var(--color-maya-gold) / <alpha-value>)",
           charcoal: "rgb(var(--color-maya-charcoal) / <alpha-value>)",
-          ivory: "#FAFAF6",
-          sky: "#DCEAE3",
-          sand: "#E4E0D0",
+          ivory: "#F8F5EC",
+          sky: "#DDEBE8",
+          sand: "#C9D9CC",
         },
         navy: {
-          900: "#0B2E23",
-          800: "#1B7A5A",
+          900: "#0D4F43",
+          800: "#075E4A",
         },
       },
       fontFamily: {
@@ -64,10 +70,11 @@ const config: Config = {
       },
       backgroundImage: {
         mosaic:
-          "radial-gradient(circle at 20% 20%, rgba(197,138,43,0.15) 0, transparent 40%), radial-gradient(circle at 80% 0%, rgba(7,59,42,0.25) 0, transparent 40%), radial-gradient(circle at 50% 80%, rgba(20,90,67,0.25) 0, transparent 45%)",
+          "radial-gradient(circle at 20% 20%, rgba(217,164,65,0.15) 0, transparent 40%), radial-gradient(circle at 80% 0%, rgba(7,94,74,0.25) 0, transparent 40%), radial-gradient(circle at 50% 80%, rgba(13,79,67,0.25) 0, transparent 45%)",
       },
     },
   },
   plugins: [],
 };
 export default config;
+

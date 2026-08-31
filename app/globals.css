@@ -20,27 +20,20 @@ html {
 
 body {
   background-color: #F8F5EC;
-  color: #26332D;
+  color: #102A43;
 }
 
 /* Default brand-color CSS variables — space-separated RGB triplets */
-/* Color values below are Day Trips from Dublin's own Emerald/Gold Irish
-   palette. The underlying CSS variable and Tailwind class names still say
-   "maya-*"/"chichen-*" (a leftover from the Chichen Itza repo this project
-   was cloned from) — renaming those identifiers across 50+ component files
-   would be a purely cosmetic, zero-visual-effect change, so it was left for
-   a follow-up pass; every color a visitor actually sees comes from the
-   values here. */
 :root {
-  --color-maya-forest: 11 46 35; /* #0B2E23 - Deep Forest ⭐ */
-  --color-maya-jungle: 27 122 90; /* #1B7A5A - Shamrock */
-  --color-maya-ivory: 250 250 246; /* #FAFAF6 - Warm Ivory */
-  --color-maya-gold: 201 162 39; /* #C9A227 - Celtic Gold ⭐ */
-  --color-maya-charcoal: 27 43 38; /* #1B2B26 - Charcoal Green */
-  --color-gold-400: 217 181 61; /* #D9B53D - lighter gold accent */
+  --color-maya-forest: 13 79 67; /* #0D4F43 - Deep Emerald */
+  --color-maya-jungle: 7 94 74; /* #075E4A - Irish Forest Green ⭐ */
+  --color-maya-ivory: 248 245 236; /* #F8F5EC - Warm Cream ⭐ */
+  --color-maya-gold: 217 164 65; /* #D9A441 - Irish Gold ⭐ */
+  --color-maya-charcoal: 16 42 67; /* #102A43 - Deep Navy */
+  --color-gold-400: 217 164 65; /* #D9A441 - Irish Gold accent */
 
   /* Compatibility aliases */
-  --color-maya-emerald: 15 122 74; /* #0F7A4A - Emerald Green ⭐ (main brand/CTA color) */
+  --color-maya-emerald: 7 94 74; /* #075E4A - Irish Forest Green ⭐ (main brand/CTA color) */
   --color-chichen-navy: var(--color-maya-forest);
   --color-chichen-gold: var(--color-maya-gold);
   --color-chichen-charcoal: var(--color-maya-charcoal);
@@ -52,7 +45,7 @@ body {
 .rich-content h3 {
   font-family: var(--font-display), Georgia, ui-serif, serif;
   font-weight: 600;
-  color: #073B2A;
+  color: #0D4F43;
   margin-top: 1em;
   margin-bottom: 0.4em;
   scroll-margin-top: 6rem;
@@ -68,7 +61,7 @@ body {
 }
 .rich-content p {
   margin: 0.6em 0;
-  color: #26332D;
+  color: #102A43;
 }
 .rich-content ul,
 .rich-content ol {
@@ -82,7 +75,7 @@ body {
   list-style: decimal;
 }
 .rich-content a {
-  color: #073B2A;
+  color: #075E4A;
   text-decoration: underline;
   text-underline-offset: 2px;
 }
@@ -94,7 +87,7 @@ body {
 }
 .rich-content strong {
   font-weight: 700;
-  color: #073B2A;
+  color: #0D4F43;
 }
 .rich-content img {
   max-width: 100%;
@@ -110,7 +103,7 @@ body {
 .rich-content figcaption {
   margin-top: 0.5em;
   font-size: 0.85em;
-  color: rgba(38, 51, 45, 0.6);
+  color: rgba(16, 42, 67, 0.6);
   text-align: center;
 }
 .rich-content table {
@@ -121,13 +114,13 @@ body {
 }
 .rich-content table td,
 .rich-content table th {
-  border: 1px solid rgba(231, 217, 191, 0.6);
+  border: 1px solid rgba(201, 217, 204, 0.6);
   padding: 0.5em 0.75em;
   text-align: left;
 }
 .rich-content table th {
-  background: rgba(220, 231, 220, 0.4);
-  color: #073B2A;
+  background: rgba(221, 235, 232, 0.5);
+  color: #0D4F43;
   font-weight: 600;
 }
 

@@ -8,95 +8,188 @@ export default async function Hero() {
     "https://images.unsplash.com/photo-1546986294-d9cdc4873420?q=80&w=2400&auto=format&fit=crop";
 
   return (
-    <section className="relative w-full min-h-screen min-h-[100dvh] flex flex-col justify-center bg-[#F8F5EC] overflow-hidden">
+    <section className="relative w-full overflow-hidden bg-[#F8F5EC] flex flex-col justify-between h-screen h-[100dvh] min-h-screen min-h-[100dvh]">
       {/* Full-bleed Panoramic Background Image */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <SafeImage
           src={heroImageSrc}
-          alt={content.heroImageAlt || "The Cliffs of Moher along Ireland's Wild Atlantic Way under a dramatic sky"}
+          alt={content.heroImageAlt || "The Cliffs of Moher along Ireland's Wild Atlantic Way with O'Brien's Tower"}
           fill
           priority
           quality={95}
           sizes="100vw"
-          className="object-cover object-[80%_center] md:object-[78%_center] lg:object-right"
+          className="object-cover object-[78%_center] md:object-[82%_center] lg:object-right"
         />
-        {/* Atmospheric gradient overlay matching the site's Warm Ivory background tone, ensuring seamless flow */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#F8F5EC]/95 via-[#F8F5EC]/80 via-50% to-transparent sm:bg-gradient-to-r sm:from-[#F8F5EC]/95 sm:via-[#F8F5EC]/75 sm:via-42% md:from-[#F8F5EC]/90 md:via-[#F8F5EC]/50 md:via-48% lg:via-50% md:to-transparent" />
+        {/* Soft Warm Cream & Atlantic Mist gradient overlay from left to transparent on right */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#F8F5EC]/95 via-[#F8F5EC]/85 via-55% to-transparent sm:bg-gradient-to-r sm:from-[#F8F5EC]/95 sm:via-[#F8F5EC]/85 sm:via-42% md:from-[#F8F5EC]/95 md:via-[#F8F5EC]/75 md:via-48% lg:via-52% md:to-transparent" />
       </div>
 
-      {/* Hero Content Layer */}
-      <div className="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-8 pt-16 sm:pt-24 lg:pt-32 pb-16 sm:pb-20 lg:pb-28 flex-1 flex flex-col justify-center">
-        <div className="max-w-xl lg:max-w-2xl">
-          {/* Eyebrow in Celtic Gold */}
-          <p className="text-xs sm:text-[13px] font-bold tracking-[0.2em] uppercase text-[#C58A2B]">
-            {content.heroBadge || "IRELAND'S ICONIC LANDMARKS, ONE DAY AT A TIME"}
-          </p>
+      {/* Main Container */}
+      <div className="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-8 flex-1 flex flex-col justify-between pt-24 sm:pt-28 pb-5 sm:pb-7">
+        {/* Top Content Area */}
+        <div className="max-w-2xl my-auto">
+          {/* Script Tagline with subtle Irish Gold underline */}
+          <div className="inline-block relative">
+            <p className="font-script text-2xl sm:text-3xl lg:text-[32px] text-[#075E4A] leading-tight">
+              Explore More. Travel Beyond.
+            </p>
+            {/* Subtle curved underline stroke */}
+            <svg
+              viewBox="0 0 160 12"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              className="w-28 sm:w-36 h-2 text-[#D9A441] -mt-1 opacity-90"
+            >
+              <path
+                d="M2 7C40 2, 100 2, 158 8"
+                stroke="currentColor"
+                strokeWidth="2.5"
+                strokeLinecap="round"
+              />
+            </svg>
+          </div>
 
           {/* Main Headline */}
-          <h1 className="mt-2.5 font-serif text-4xl sm:text-5xl md:text-6xl lg:text-[64px] font-bold leading-[1.1] tracking-tight text-[#073B2A]">
-            {content.heroHeading || "Day Trips from Dublin"}
+          <h1 className="mt-2 font-serif text-4xl sm:text-5xl lg:text-[52px] font-bold leading-[1.08] tracking-tight text-[#0D4F43]">
+            Day Trips<br />
+            from Dublin
           </h1>
 
-          {/* Cursive / Calligraphy Script Subtitle */}
-          <p className="mt-1 font-script text-4xl sm:text-5xl lg:text-6xl font-normal text-[#C58A2B] leading-tight">
-            Explore. Discover. Be Amazed.
+          {/* Catchphrase Subheading */}
+          <p className="mt-2.5 text-base sm:text-lg lg:text-[19px] font-bold text-[#075E4A] leading-snug">
+            Unforgettable Adventures. Just a Day Away.
           </p>
 
-          {/* Subtitle / Description */}
-          <p className="mt-3.5 text-base sm:text-lg lg:text-[19px] text-[#11261D] font-semibold leading-relaxed max-w-xl">
+          {/* Body Description */}
+          <p className="mt-2 text-xs sm:text-sm text-[#102A43]/80 font-normal leading-relaxed max-w-xl">
             {content.heroSubheading
               ? content.heroSubheading.replace(/<[^>]+>/g, " ")
-              : "Book the best guided day trips from Dublin with round-trip coach transport and a local driver-guide included."}
+              : "Book the best guided day trips from Dublin — the Cliffs of Moher, the Wicklow Mountains, and the Giant's Causeway — with round-trip coach transport and a local driver-guide included."}
           </p>
 
-          {/* Action Buttons */}
-          <div className="mt-7 flex flex-wrap items-center gap-3.5 sm:gap-4">
+          {/* Action Buttons Row */}
+          <div className="mt-5 sm:mt-6 flex flex-wrap items-center gap-3.5">
             <a
               href={content.heroCtaPrimaryHref || "#tours"}
-              className="group inline-flex items-center justify-center gap-2 rounded-lg bg-[#073B2A] px-7 py-3.5 text-xs sm:text-sm font-bold uppercase tracking-wider text-white shadow-sm transition-all duration-300 hover:bg-[#145A43] hover:shadow-md hover:-translate-y-0.5"
+              className="group inline-flex items-center justify-center gap-2 rounded-lg bg-[#075E4A] px-5 sm:px-6 py-2.5 sm:py-3 text-xs sm:text-sm font-bold uppercase tracking-wider text-white shadow-md transition-all duration-300 hover:bg-[#0D4F43] hover:shadow-lg hover:-translate-y-0.5"
             >
+              {/* Location Pin Icon */}
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2.2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="h-4 w-4 shrink-0"
+              >
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
               <span>{content.heroCtaPrimaryText || "EXPLORE TOURS"}</span>
               <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
             </a>
 
             <a
               href={content.heroCtaSecondaryHref || "#tours"}
-              className="group inline-flex items-center justify-center gap-2 rounded-lg border-2 border-[#073B2A] bg-white/40 md:bg-transparent px-7 py-3.5 text-xs sm:text-sm font-bold uppercase tracking-wider text-[#073B2A] backdrop-blur-sm transition-all duration-300 hover:bg-[#073B2A] hover:text-white hover:-translate-y-0.5"
+              className="group inline-flex items-center justify-center gap-2 rounded-lg border-2 border-[#075E4A] bg-white/80 backdrop-blur-sm px-5 sm:px-6 py-2.5 sm:py-3 text-xs sm:text-sm font-bold uppercase tracking-wider text-[#075E4A] shadow-sm transition-all duration-300 hover:bg-[#075E4A] hover:text-white hover:-translate-y-0.5"
             >
-              <span>{content.heroCtaSecondaryText || "VIEW PRIVATE TOURS"}</span>
+              {/* Calendar Icon */}
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="h-4 w-4 shrink-0"
+              >
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                <line x1="16" y1="2" x2="16" y2="6" />
+                <line x1="8" y1="2" x2="8" y2="6" />
+                <line x1="3" y1="10" x2="21" y2="10" />
+                <path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01M16 18h.01" />
+              </svg>
+              <span>{content.heroCtaSecondaryText || "VIEW ALL DAY TRIPS"}</span>
             </a>
           </div>
+        </div>
 
-          {/* Trust Badges Row */}
-          <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3 pt-1 text-xs sm:text-sm font-semibold text-[#26332D]">
-            {/* Free Cancellation */}
-            <div className="inline-flex items-center gap-2">
-              <span className="flex h-4 w-4 items-center justify-center rounded-full bg-[#073B2A] text-white">
-                <svg viewBox="0 0 16 16" fill="none" className="h-2.5 w-2.5 stroke-current stroke-[2.5]" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M3.5 8.5L6.5 11.5L12.5 4.5" />
+        {/* Bottom Deep Emerald Stats Bar */}
+        <div className="w-full rounded-xl sm:rounded-2xl bg-[#0D4F43] px-4 sm:px-6 py-3 sm:py-4 shadow-xl text-white border border-white/10">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-0 md:divide-x md:divide-white/20">
+            {/* Stat 1 */}
+            <div className="flex items-center gap-3 sm:px-3 lg:px-4">
+              <div className="flex h-9 w-9 sm:h-10 sm:w-10 shrink-0 items-center justify-center rounded-full border border-[#D9A441]/40 bg-white/10 text-[#D9A441]">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-4 w-4 sm:h-5 sm:w-5">
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" strokeLinecap="round" strokeLinejoin="round" />
+                  <circle cx="9" cy="7" r="4" strokeLinecap="round" strokeLinejoin="round" />
+                  <path d="M22 21v-2a4 4 0 0 0-3-3.87" strokeLinecap="round" strokeLinejoin="round" />
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
-              </span>
-              <span>Free Cancellation</span>
+              </div>
+              <div>
+                <div className="text-base sm:text-lg lg:text-xl font-bold tracking-tight text-white leading-tight">
+                  {content.sections.heroStats?.[0]?.value || "10,000+"}
+                </div>
+                <div className="text-[11px] sm:text-xs text-[#DDEBE8] font-medium mt-0.5">
+                  {content.sections.heroStats?.[0]?.label || "Happy Travelers"}
+                </div>
+              </div>
             </div>
 
-            {/* Best Price Guarantee */}
-            <div className="inline-flex items-center gap-2">
-              <span className="flex h-4 w-4 items-center justify-center rounded-full bg-[#C58A2B] text-white">
-                <svg viewBox="0 0 24 24" fill="none" className="h-3 w-3 stroke-current stroke-[2.5]" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            {/* Stat 2 */}
+            <div className="flex items-center gap-3 sm:px-3 lg:px-4">
+              <div className="flex h-9 w-9 sm:h-10 sm:w-10 shrink-0 items-center justify-center rounded-full border border-[#D9A441]/40 bg-white/10 text-[#D9A441]">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-4 w-4 sm:h-5 sm:w-5">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
-              </span>
-              <span>Best Price Guarantee</span>
+              </div>
+              <div>
+                <div className="text-base sm:text-lg lg:text-xl font-bold tracking-tight text-white leading-tight">
+                  {content.sections.heroStats?.[1]?.value || "4.8/5"}
+                </div>
+                <div className="text-[11px] sm:text-xs text-[#DDEBE8] font-medium mt-0.5">
+                  {content.sections.heroStats?.[1]?.label || "Average Rating"}
+                </div>
+              </div>
             </div>
 
-            {/* Instant Confirmation */}
-            <div className="inline-flex items-center gap-2">
-              <span className="flex h-4 w-4 items-center justify-center rounded-full bg-[#073B2A] text-white">
-                <svg viewBox="0 0 16 16" fill="none" className="h-2.5 w-2.5 stroke-current stroke-[2.5]" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M3.5 8.5L6.5 11.5L12.5 4.5" />
+            {/* Stat 3 */}
+            <div className="flex items-center gap-3 sm:px-3 lg:px-4">
+              <div className="flex h-9 w-9 sm:h-10 sm:w-10 shrink-0 items-center justify-center rounded-full border border-[#D9A441]/40 bg-white/10 text-[#D9A441]">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-4 w-4 sm:h-5 sm:w-5">
+                  <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6" strokeLinecap="round" strokeLinejoin="round" />
+                  <line x1="8" y1="2" x2="8" y2="18" strokeLinecap="round" strokeLinejoin="round" />
+                  <line x1="16" y1="6" x2="16" y2="22" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
-              </span>
-              <span>Instant Confirmation</span>
+              </div>
+              <div>
+                <div className="text-base sm:text-lg lg:text-xl font-bold tracking-tight text-white leading-tight">
+                  {content.sections.heroStats?.[2]?.value || "30+"}
+                </div>
+                <div className="text-[11px] sm:text-xs text-[#DDEBE8] font-medium mt-0.5">
+                  {content.sections.heroStats?.[2]?.label || "Amazing Destinations"}
+                </div>
+              </div>
+            </div>
+
+            {/* Stat 4 */}
+            <div className="flex items-center gap-3 sm:px-3 lg:px-4">
+              <div className="flex h-9 w-9 sm:h-10 sm:w-10 shrink-0 items-center justify-center rounded-full border border-[#D9A441]/40 bg-white/10 text-[#D9A441]">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-4 w-4 sm:h-5 sm:w-5">
+                  <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" strokeLinecap="round" strokeLinejoin="round" />
+                  <circle cx="12" cy="13" r="4" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </div>
+              <div>
+                <div className="text-base sm:text-lg lg:text-xl font-bold tracking-tight text-white leading-tight">
+                  {content.sections.heroStats?.[3]?.value || "Unforgettable"}
+                </div>
+                <div className="text-[11px] sm:text-xs text-[#DDEBE8] font-medium mt-0.5">
+                  {content.sections.heroStats?.[3]?.label || "Memories Await"}
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -104,3 +197,6 @@ export default async function Hero() {
     </section>
   );
 }
+
+
+

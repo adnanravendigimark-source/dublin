@@ -5,7 +5,7 @@ import { getSiteChrome } from "@/lib/homepage";
 export default async function Footer() {
   const { header, footer } = await getSiteChrome();
   return (
-    <footer className="bg-[#073B2A] border-t border-white/10 py-16 text-white/70">
+    <footer className="bg-[#0D4F43] border-t border-white/10 py-16 text-white/70">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col gap-10 border-b border-white/10 pb-12 sm:flex-row sm:justify-between">
           <div className="max-w-sm">
@@ -18,7 +18,7 @@ export default async function Footer() {
               line2={header.logoLine2}
             />
             <p
-              className="mt-4 text-sm text-white/60 leading-relaxed [&_strong]:text-white [&_a]:text-[#C58A2B] [&_a]:underline"
+              className="mt-4 text-sm text-white/60 leading-relaxed [&_strong]:text-white [&_a]:text-[#D9A441] [&_a]:underline"
               dangerouslySetInnerHTML={{ __html: footer.tagline }}
             />
           </div>
@@ -30,7 +30,7 @@ export default async function Footer() {
                 <ul className="mt-3 space-y-2.5">
                   {col.links.map((link) => (
                     <li key={link.href + link.label}>
-                      <Link href={link.href} className="transition-colors hover:text-[#C58A2B]">
+                      <Link href={link.href} className="transition-colors hover:text-[#D9A441]">
                         {link.label}
                       </Link>
                     </li>
@@ -55,3 +55,4 @@ export default async function Footer() {
     </footer>
   );
 }
+
