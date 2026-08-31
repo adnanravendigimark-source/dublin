@@ -80,7 +80,7 @@ export default function TourCard({
 
         {/* Footer pinned to the bottom of the card regardless of content above */}
         {recommended ? (
-          <div className="mt-auto border-t border-[#C58A2B]/20 pt-4">
+          <div className="mt-auto border-t border-[#D9A441]/20 pt-4">
             <div className="flex items-end justify-between gap-2">
               <div>
                 <p className="text-[11px] uppercase tracking-wide text-stone-900/40">from</p>
@@ -90,13 +90,13 @@ export default function TourCard({
                 href={tour.href}
                 target="_blank"
                 rel="noopener nofollow sponsored"
-                className="flex shrink-0 items-center gap-1.5 rounded-lg bg-[#073B2A] px-5 py-2.5 text-xs sm:text-sm font-bold uppercase tracking-wider text-white shadow-md shadow-[#073B2A]/20 transition-all duration-300 hover:bg-[#145A43] hover:scale-[1.02]"
+                className="flex shrink-0 items-center gap-1.5 rounded-lg bg-[#075E4A] px-5 py-2.5 text-xs sm:text-sm font-bold uppercase tracking-wider text-white shadow-md shadow-[#075E4A]/20 transition-all duration-300 hover:bg-[#0D4F43] hover:scale-[1.02]"
               >
                 {bookNowText}
               </a>
             </div>
             {recommended.urgencyText && (
-              <p className="mt-2.5 flex items-center gap-1 text-[11px] font-semibold text-[#C58A2B]">
+              <p className="mt-2.5 flex items-center gap-1 text-[11px] font-semibold text-[#D9A441]">
                 <LockIcon className="h-3 w-3" /> {recommended.urgencyText}
               </p>
             )}
@@ -117,7 +117,7 @@ export default function TourCard({
               href={tour.href}
               target="_blank"
               rel="noopener nofollow sponsored"
-              className="rounded-lg bg-[#073B2A] px-5 py-2.5 text-xs sm:text-sm font-bold uppercase tracking-wider text-white shadow-md shadow-[#073B2A]/20 transition-all duration-300 hover:bg-[#145A43] hover:scale-[1.02]"
+              className="rounded-lg bg-[#075E4A] px-5 py-2.5 text-xs sm:text-sm font-bold uppercase tracking-wider text-white shadow-md shadow-[#075E4A]/20 transition-all duration-300 hover:bg-[#0D4F43] hover:scale-[1.02]"
             >
               {bookNowText}
             </a>

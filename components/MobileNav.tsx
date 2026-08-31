@@ -36,7 +36,7 @@ export default function MobileNav({
         onClick={() => setOpen((v) => !v)}
         aria-expanded={open}
         aria-label={open ? "Close menu" : "Open menu"}
-        className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-[#E7D9BF] bg-[#F8F5EC] text-[#073B2A] transition hover:bg-[#DCE7DC]"
+        className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-[#C9D9CC] bg-[#F8F5EC] text-[#075E4A] transition hover:bg-[#DDEBE8]"
       >
         <svg viewBox="0 0 24 24" fill="none" className="h-6 w-6" stroke="currentColor" strokeWidth={1.8}>
           {open ? (
@@ -50,18 +50,18 @@ export default function MobileNav({
       {open && (
         <>
           <div
-            className="absolute inset-x-0 top-full z-40 h-screen bg-[#073B2A]/40 backdrop-blur-sm"
+            className="absolute inset-x-0 top-full z-40 h-screen bg-[#0D4F43]/40 backdrop-blur-sm"
             aria-hidden="true"
             onClick={() => setOpen(false)}
           />
-          <div className="absolute inset-x-0 top-full z-40 max-h-[80vh] overflow-y-auto border-b border-[#E7D9BF] bg-[#F8F5EC] shadow-2xl">
+          <div className="absolute inset-x-0 top-full z-40 max-h-[80vh] overflow-y-auto border-b border-[#C9D9CC] bg-[#F8F5EC] shadow-2xl">
             <nav className="flex flex-col px-4 py-3">
               {navLinks.map((link) => (
                 <Link
                   key={link.href + link.label}
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className="border-b border-[#E7D9BF]/50 py-3.5 text-base font-semibold text-[#26332D] transition hover:text-[#C58A2B] last:border-b-0"
+                  className="border-b border-[#C9D9CC]/50 py-3.5 text-base font-semibold text-[#102A43] transition hover:text-[#075E4A] last:border-b-0"
                 >
                   {link.label}
                 </Link>
@@ -71,7 +71,7 @@ export default function MobileNav({
               <Link
                 href={ctaHref}
                 onClick={() => setOpen(false)}
-                className="block rounded-lg bg-[#073B2A] py-3 text-center text-sm font-bold uppercase tracking-wider text-white shadow-md transition hover:bg-[#145A43]"
+                className="block rounded-lg bg-[#075E4A] py-3 text-center text-sm font-bold uppercase tracking-wider text-white shadow-md transition hover:bg-[#0D4F43]"
               >
                 {ctaText}
               </Link>
