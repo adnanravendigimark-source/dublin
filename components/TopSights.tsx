@@ -1,9 +1,9 @@
 import SafeImage from "./SafeImage";
 import { getHomepageContent } from "@/lib/homepage";
 
-export default async function PalacesAndMansions() {
+export default async function TopSights() {
   const { sections } = await getHomepageContent();
-  const s = sections.tower;
+  const s = sections.topSights;
 
   return (
     <section id="palaces-mansions" className="bg-white py-20 sm:py-24 border-y border-stone-100">

@@ -22,8 +22,8 @@ export default async function Header() {
       <div className="relative z-10 mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-8">
         <Logo
           logoImage={header.logoImage}
-          logoAlt={header.logoAlt || "Chichen Itza Tours"}
-          line1={header.logoLine1 || "CHICHEN ITZA"}
+          logoAlt={header.logoAlt || "Day Trips from Dublin"}
+          line1={header.logoLine1 || "DAY TRIPS FROM DUBLIN"}
           line2={header.logoLine2 || "— TOURS —"}
         />
 

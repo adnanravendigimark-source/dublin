@@ -18,33 +18,33 @@ export interface AboutPageContent {
 }
 
 const DEFAULT_CONTENT = `<h2>Our Mission</h2>
-<p>We built this independent guide with one mission: visiting Chichén Itzá is one of the most breathtaking cultural experiences in the world — but only if you book the right tour. With hundreds of operators in Cancun and Riviera Maya, prices and service quality vary dramatically.</p>
-<p>We are an independent booking resource — not an official Mexican government entity or INAH ticketing authority. We rigorously screen and compare verified guided excursions, early access admissions, and cenote day tours from licensed, top-rated local operators in Yucatan and Quintana Roo.</p>
-<h2>How We Screen & Select Chichén Itzá Tours</h2>
-<p>Every tour and excursion featured on this site is vetted against four strict criteria before earning a recommendation:</p>
+<p>We built this independent guide with one mission: getting out of Dublin to see Ireland's most iconic landmarks is one of the best things a visitor can do — but only if you book the right tour. With dozens of coach operators running day trips from Dublin, prices and quality vary dramatically.</p>
+<p>We are an independent booking resource — not an official tourism board or a tour operator ourselves. We rigorously screen and compare verified guided day trips from licensed, top-rated Dublin-based coach operators covering the Cliffs of Moher, the Wicklow Mountains, and the Giant's Causeway.</p>
+<h2>How We Screen & Select Day Trips from Dublin</h2>
+<p>Every tour featured on this site is vetted against four strict criteria before earning a recommendation:</p>
 <ul>
-<li><strong>Certified Archeologist Guides</strong> — Every guided tour is led by an official INAH-certified bilingual guide with deep knowledge of ancient Mayan history, astronomy, and architecture.</li>
-<li><strong>Verified Traveler Reviews</strong> — We only recommend excursions with thousands of authentic, verified reviews and average ratings above 4.7 stars.</li>
-<li><strong>Transparent Pricing & Inclusions</strong> — What you see is what you pay: air-conditioned hotel transport, entrance fees, cenote access, and buffet meals are clearly stated upfront with zero hidden charges.</li>
-<li><strong>100% Free Cancellation</strong> — Every tour includes full flexibility with free cancellation up to 24 hours before your departure.</li>
+<li><strong>Licensed Local Guides</strong> — Every guided tour is led by an experienced driver-guide with deep knowledge of Irish history, folklore, and the landscape.</li>
+<li><strong>Verified Traveler Reviews</strong> — We only recommend day trips with thousands of authentic, verified reviews and average ratings above 4.5 stars.</li>
+<li><strong>Transparent Pricing & Inclusions</strong> — What you see is what you pay: round-trip coach transport, driver-guide commentary, and any entrance fees are clearly stated upfront with zero hidden charges.</li>
+<li><strong>Free Cancellation</strong> — Every tour includes flexibility with free cancellation up to 24 hours before your departure.</li>
 </ul>
 <h2>Independent Booking Resource</h2>
-<p>This website is an independent travel companion. We don't operate tour buses or sell tickets directly — all bookings go securely through GetYourGuide, a globally trusted partner, protected by official customer support and generous cancellation guarantees.</p>
+<p>This website is an independent travel companion. We don't operate coaches or sell tickets directly — all bookings go securely through GetYourGuide, a globally trusted partner, protected by official customer support and generous cancellation guarantees.</p>
 <h2>Affiliate Disclosure</h2>
-<p>When you book a Chichen Itza Tour through links on our site, we may earn a modest affiliate commission at zero additional cost to you. This support allows us to maintain up-to-date travel guides and independent comparisons.</p>
+<p>When you book a day trip from Dublin through links on our site, we may earn a modest affiliate commission at zero additional cost to you. This support allows us to maintain up-to-date travel guides and independent comparisons.</p>
 <p>Have questions before you book your trip? Feel free to reach out via our <a href="/contact">contact page</a>.</p>`;
 
 const DEFAULT_ABOUT: AboutPageContent = {
   heroEyebrow: "About Us",
-  heroHeading: "Your Independent Guide to Chichen Itza Tours & Tickets",
+  heroHeading: "Your Independent Guide to Day Trips from Dublin",
   heroSubheading:
-    "We help travelers discover and book the best certified guided tours, skip-the-line admissions, and sacred cenote day trips across the Yucatan Peninsula.",
-  heroImage: "https://images.unsplash.com/photo-1518638150340-f706e86654de?q=80&w=2000&auto=format&fit=crop",
-  heroImageAlt: "El Castillo pyramid at Chichen Itza Mayan ruins",
+    "We help travelers discover and book the best guided day trips from Dublin — the Cliffs of Moher, the Wicklow Mountains, and the Giant's Causeway.",
+  heroImage: "https://images.unsplash.com/photo-1546986294-d9cdc4873420?q=80&w=2000&auto=format&fit=crop",
+  heroImageAlt: "The Cliffs of Moher along Ireland's Wild Atlantic Way",
   content: DEFAULT_CONTENT,
-  metaTitle: "About Us | Chichen Itza Tour & Excursion Booking Guide",
+  metaTitle: "About Us | Day Trips from Dublin Booking Guide",
   metaDescription:
-    "Learn about our independent travel guide, how we curate certified Chichen Itza guided tours and cenote day trips from Cancun and Riviera Maya.",
+    "Learn about our independent travel guide, and how we curate the best guided day trips from Dublin to the Cliffs of Moher, Wicklow, and the Giant's Causeway.",
   canonicalUrl: "",
   noIndex: false,
   noFollow: false,

@@ -3,7 +3,7 @@
 // What it does:
 //   1. Creates every table the app needs, if they don't already exist.
 //   2. If a table is empty, seeds it from the matching file in /data (the
-//      real Chichen Itza Tour & Tickets starter content) so the site has
+//      real Dublin Day Trip & Tickets starter content) so the site has
 //      real tours/posts/FAQs/homepage copy from the first run.
 //
 // How to run it:
@@ -536,7 +536,7 @@ async function seedHomepage() {
       featured_badge_label, featured_urgency_text, featured_reasons
     ) VALUES (
       1, ${h.heroBadge || ""}, ${h.heroHeading || ""}, ${h.heroSubheading || ""},
-      ${h.heroImage || "/images/chichen-itza-hero.jpg"}, ${h.heroImageAlt || ""}, ${h.ratingValue || ""}, ${h.ratingCount || ""},
+      ${h.heroImage || "https://images.unsplash.com/photo-1546986294-d9cdc4873420?q=80&w=2400&auto=format&fit=crop"}, ${h.heroImageAlt || ""}, ${h.ratingValue || ""}, ${h.ratingCount || ""},
       ${!!h.showFeaturedTour}, ${h.featuredTourId || ""}, ${h.featuredBadgeLabel || ""},
       ${h.featuredUrgencyText || ""}, ${JSON.stringify(h.featuredReasons || [])}::jsonb
     )
@@ -604,9 +604,9 @@ async function seedSiteSettings() {
     console.log("site_settings: already configured — skipping seed.");
     return;
   }
-  const blogTitle = "Chichen Itza Tour Guides & Tips | Chichen Itza Tour";
+  const blogTitle = "Dublin Day Trip Guides & Tips | Day Trips from Dublin";
   const blogDescription =
-    "Practical guides for a Chichen Itza tour in Yucatan Mexico — early access tips, all-inclusive day tours, cenotes, and more.";
+    "Practical guides for day trips from Dublin — what to pack, best time to go, tour comparisons, and more.";
   await sql`
     INSERT INTO site_settings (id, blog_meta_title, blog_meta_description)
     VALUES (1, ${blogTitle}, ${blogDescription})
@@ -622,35 +622,35 @@ async function seedAboutPage() {
     return;
   }
   const reasons = [
-    { icon: "ShieldCheckIcon", title: "Certified Archeologist Guides", body: "Every tour we list runs with licensed INAH bilingual guides — never untrained guides or markups." },
-    { icon: "StarIcon", title: "Real Review Volume", body: "We only recommend excursions with thousands of verifiable review counts and 4.7+ star ratings." },
-    { icon: "LockIcon", title: "Transparent Pricing", body: "The price you see on the tour card is the price you pay — no hidden entrance fees or taxes added at checkout." },
-    { icon: "HeadsetIcon", title: "Honest, Clear Info", body: "We tell you exactly what is included — transport, cenote admission, buffet meals, and gear." },
+    { icon: "ShieldCheckIcon", title: "Licensed Local Guides", body: "Every tour we list runs with an experienced Irish driver-guide — never untrained guides or markups." },
+    { icon: "StarIcon", title: "Real Review Volume", body: "We only recommend day trips with thousands of verifiable review counts and 4.5+ star ratings." },
+    { icon: "LockIcon", title: "Transparent Pricing", body: "The price you see on the tour card is the price you pay — no hidden fees added at checkout." },
+    { icon: "HeadsetIcon", title: "Honest, Clear Info", body: "We tell you exactly what is included — coach transport, driver-guide commentary, and any entrance fees." },
   ];
   const a = {
     heroEyebrow: "About Us",
-    heroHeading: "Your Independent Guide to Chichen Itza Tours & Tickets",
+    heroHeading: "Your Independent Guide to Day Trips from Dublin",
     heroSubheading:
-      "We help travelers discover and book the best certified guided tours, skip-the-line admissions, and sacred cenote day trips across the Yucatan Peninsula.",
-    heroImage: "https://images.unsplash.com/photo-1518638150340-f706e86654de?q=80&w=2000&auto=format&fit=crop",
-    heroImageAlt: "El Castillo pyramid at Chichen Itza Mayan ruins",
-    introHeading: "Why We Built a Chichen Itza Tour Guide",
+      "We help travelers discover and book the best guided day trips from Dublin — the Cliffs of Moher, the Wicklow Mountains, and the Giant's Causeway.",
+    heroImage: "https://images.unsplash.com/photo-1546986294-d9cdc4873420?q=80&w=2000&auto=format&fit=crop",
+    heroImageAlt: "The Cliffs of Moher along Ireland's Wild Atlantic Way",
+    introHeading: "Why We Built a Day Trips from Dublin Guide",
     introParagraph1:
-      "We built this site around one belief: visiting Chichén Itzá is one of the most breathtaking cultural experiences in the world — but only if you book the right tour. With hundreds of operators in Cancun and Riviera Maya, prices and service quality vary dramatically.",
+      "We built this site around one belief: getting out of Dublin to see Ireland's most iconic landmarks is one of the best things a visitor can do — but only if you book the right tour. With dozens of coach operators running day trips from Dublin, prices and quality vary dramatically.",
     introParagraph2:
-      "We're an independent Chichen Itza tour guide — not an official government website. We compare day tours and early access tickets from licensed, established Yucatan operators, currently via GetYourGuide, and point you to the ones worth your time and money.",
-    introImage: "https://images.unsplash.com/photo-1688330393243-b7d7bc9cd3d7?q=80&w=1000&auto=format&fit=crop",
-    introImageAlt: "Temple of the Warriors and columns at Chichen Itza",
-    reasonsHeading: "How We Pick Our Chichen Itza Tours",
+      "We're an independent Dublin day-trip guide — not an official tourism board or a tour operator ourselves. We compare guided day trips from licensed, established Dublin-based operators, currently via GetYourGuide, and point you to the ones worth your time and money.",
+    introImage: "https://images.unsplash.com/photo-1666626755396-6ee8844029e2?q=80&w=1000&auto=format&fit=crop",
+    introImageAlt: "Glendalough valley in the Wicklow Mountains, Ireland",
+    reasonsHeading: "How We Pick Our Day Trips from Dublin",
     reasonsSubheading: "Every tour listed on this site is screened against four criteria before it earns a spot.",
     disclosureHeading: "A Note on How We Earn",
     disclosureBody:
-      "When you book a Chichen Itza tour through a link on this site, we earn a small commission from the operator at no extra cost to you. This is how we keep the site free and independently written — it doesn't affect which tours we recommend or how we rank them.",
-    ctaText: "Ready to book your Chichen Itza tour?",
-    ctaButtonLabel: "Compare Chichen Itza Tours",
-    metaTitle: "About Us | Chichen Itza Tour & Excursion Booking Guide",
+      "When you book a day trip from Dublin through a link on this site, we earn a small commission from the operator at no extra cost to you. This is how we keep the site free and independently written — it doesn't affect which tours we recommend or how we rank them.",
+    ctaText: "Ready to book your Dublin day trip?",
+    ctaButtonLabel: "Compare Day Trips from Dublin",
+    metaTitle: "About Us | Day Trips from Dublin Booking Guide",
     metaDescription:
-      "Learn about our independent travel guide, how we curate certified Chichen Itza guided tours and cenote day trips from Cancun and Riviera Maya.",
+      "Learn about our independent travel guide, and how we curate the best guided day trips from Dublin to the Cliffs of Moher, Wicklow, and the Giant's Causeway.",
   };
   await sql`
     INSERT INTO about_page (
@@ -678,25 +678,25 @@ async function seedContactPage() {
     return;
   }
   const reasons = [
-    { icon: "HeadsetIcon", title: "Tour Booking Advice", body: "Need advice choosing between the all-inclusive cenote tour, early access tour, or private VIP excursion?" },
-    { icon: "BriefcaseIcon", title: "Partnerships & Operators", body: "Certified local Yucatan tour operators, DMCs, and travel partners — contact us regarding listings." },
-    { icon: "MailIcon", title: "General Inquiries", body: "Questions about visiting hours, weather tips, transport from Cancun, or site feedback." },
+    { icon: "HeadsetIcon", title: "Tour Booking Advice", body: "Need advice choosing between the Cliffs of Moher tour, the Wicklow Mountains tour, or the Giant's Causeway trip?" },
+    { icon: "BriefcaseIcon", title: "Partnerships & Operators", body: "Licensed Dublin-based coach operators and travel partners — contact us regarding listings." },
+    { icon: "MailIcon", title: "General Inquiries", body: "Questions about pickup points, weather tips, or site feedback." },
   ];
   const c = {
     heroEyebrow: "Contact",
     heroHeading: "Get in Touch",
     heroSubheading:
-      "Questions about booking a Chichen Itza tour, hotel pickup logistics, or travel partnerships? Reach out directly.",
+      "Questions about booking a Dublin day trip, pickup logistics, or travel partnerships? Reach out directly.",
     email: "livetravelpartner@gmail.com",
     emailNote: "We typically reply within 1–2 business days.",
     reasonsHeading: "What we can help with",
     footerNote:
       "Already have an existing booking? Please check your GetYourGuide confirmation voucher for 24/7 direct operator contact and cancellation tools.",
-    ctaHeading: "Ready to explore the Mayan ruins?",
-    ctaButtonLabel: "Compare Chichen Itza Tours & Tickets",
-    metaTitle: "Contact Us | Chichen Itza Tour & Tickets",
+    ctaHeading: "Ready to explore Ireland's landmarks?",
+    ctaButtonLabel: "Compare Day Trips from Dublin",
+    metaTitle: "Contact Us | Day Trips from Dublin",
     metaDescription:
-      "Questions about booking a Chichen Itza tour or private excursion in Yucatan Mexico? Contact our team for assistance.",
+      "Questions about booking a guided day trip from Dublin? Contact our team for assistance.",
   };
   await sql`
     INSERT INTO contact_page (

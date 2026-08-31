@@ -3,7 +3,8 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import TourGrid from "@/components/TourGrid";
 import WhatYouSee from "@/components/WhatYouSee";
-import PalacesAndMansions from "@/components/PalacesAndMansions";
+import WhyBookWithUs from "@/components/WhyBookWithUs";
+import TopSights from "@/components/TopSights";
 import PracticalInfo from "@/components/PracticalInfo";
 import PriceComparison from "@/components/PriceComparison";
 import BlogSection from "@/components/BlogSection";
@@ -81,7 +82,8 @@ export default async function HomePage() {
         <Hero />
         <TourGrid />
         <WhatYouSee />
-        <PalacesAndMansions />
+        <WhyBookWithUs />
+        <TopSights />
         <PracticalInfo />
         <PriceComparison />
         <BlogSection />

@@ -46,7 +46,7 @@ export default async function BlogIndexPage() {
           <div className="absolute inset-0 z-0 pointer-events-none">
             <SafeImage
               src={heroImage}
-              alt={heroImageAlt || "The Chichen Itza pyramid ruins at golden hour"}
+              alt={heroImageAlt || "The Cliffs of Moher at golden hour"}
               fill
               priority
               quality={75}

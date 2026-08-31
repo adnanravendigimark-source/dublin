@@ -1,17 +1,18 @@
-# Chichen Itza Tour & Tickets — Homepage (Next.js)
+# Day Trips from Dublin — Homepage (Next.js)
 
-A GetYourGuide affiliate site for Chichen Itza tours and tickets — a
+A GetYourGuide affiliate site for guided day trips from Dublin — a
 tour-first homepage (hero, trust badges, tour grid, price comparison, FAQ
 with schema) plus a full `/admin` content CMS, targeting the focus keyword
-"Chichen Itza Tour" in the title/H1/meta. Guided, self-guided, and combo
-(cenote add-on) tour types, by design.
+"Day Trips from Dublin | Dublin Day Trips" in the title/H1/meta. Guided
+coach day trips to the Cliffs of Moher, the Wicklow Mountains, and the
+Giant's Causeway, by design.
 
 ## 1. Install & run locally
 
 Requires Node.js 18.17+.
 
 ```bash
-cd chichen-itza
+cd day-trips-from-dublin
 npm install
 npm run dev
 ```
@@ -41,9 +42,9 @@ designed to live in Neon Postgres so a non-technical editor can change it
 from `/admin` with the change going live immediately — no rebuild or
 redeploy.
 
-**Until you set up a database, the site falls back to the real Chichen
-Itza starter content baked into `/data` (tours, FAQs, homepage copy, and
-blog posts)** — so it's fully browsable and demo-ready out of the box.
+**Until you set up a database, the site falls back to the real Dublin
+starter content baked into `/data` (tours, FAQs, homepage copy, and blog
+posts)** — so it's fully browsable and demo-ready out of the box.
 Saving changes from `/admin` won't persist anywhere until `DATABASE_URL` is
 set, though — the admin panel will show a "couldn't be reached" error on
 save until then.
@@ -70,27 +71,27 @@ the Users page.
 
 ## 5. Photography
 
-The hero and tour photography use real, free-to-use photos of El Castillo,
-the Chichen Itza archaeological site, and nearby cenotes from Unsplash
-(free for commercial use, no attribution required — credits are in a code
-comment at the top of `components/Hero.tsx`). Swap in your own or licensed
-photos of the actual tours/operators you're promoting whenever you have
-them — nothing beats real photos of the actual experience.
+The hero and tour photography use real, free-to-use photos of the Cliffs
+of Moher, the Wicklow Mountains, and Ireland's Wild Atlantic Way from
+Unsplash (free for commercial use, no attribution required — credits are
+in a code comment at the top of `components/Hero.tsx`). Swap in your own
+or licensed photos of the actual tours/operators you're promoting whenever
+you have them — nothing beats real photos of the actual experience.
 
 ## 6. Before you launch
 
 A few placeholders need your own real values before this goes live:
 
 - `lib/site.ts` → `SITE_URL` — set to whatever domain you actually connect
-  in Vercel (currently set to `bookchichenitzatour.com`).
+  in Vercel (currently a placeholder, `daytripsfromdublin.com`).
 - `app/layout.tsx` → the `G-XXXXXXXXXX` Google Analytics ID (two spots) —
   replace with this site's own GA4 measurement ID. Don't reuse another
   site's ID, or you'll mix both sites' traffic together.
 - `.env` → `ADMIN_EMAIL` / `ADMIN_PASSWORD` / `ADMIN_SESSION_SECRET` /
-  `DATABASE_URL` / `GYG_PARTNER_ID` (see the comments in that file).
+  `DATABASE_URL` / `GYG_PARTNER_ID` / `BLOB_STORE_ID` /
+  `BLOB_READ_WRITE_TOKEN` (see the comments in that file).
 
 ## 7. Deploying
 
 Standard Next.js App Router project — deploys as-is to Vercel, Netlify, or
 any Node host. `npm run build && npm run start` for a production build.
-# dublin

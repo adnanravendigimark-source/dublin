@@ -46,7 +46,7 @@ const CONTENT_SECTIONS = [
   { id: "sec-highlights", label: "Highlights" },
   { id: "sec-tourgrid", label: "Tour Grid" },
   { id: "sec-why", label: "What You See" },
-  { id: "sec-tower", label: "Waterfront Palaces & Mansions" },
+  { id: "sec-topsights", label: "Top Sights" },
   { id: "sec-practical", label: "Practical Info" },
   { id: "sec-price", label: "Price Comparison" },
   { id: "sec-ctabanner", label: "Bottom CTA Banner" },
@@ -193,8 +193,8 @@ export default function HomepageForm({ initial, tours }: { initial: HomepageCont
     setSaved(false);
   }
 
-  function updateTower(patch: Partial<HomepageContent["sections"]["tower"]>) {
-    setContent((c) => ({ ...c, sections: { ...c.sections, tower: { ...c.sections.tower, ...patch } } }));
+  function updateTopSights(patch: Partial<HomepageContent["sections"]["topSights"]>) {
+    setContent((c) => ({ ...c, sections: { ...c.sections, topSights: { ...c.sections.topSights, ...patch } } }));
     setSaved(false);
   }
 
@@ -425,7 +425,7 @@ export default function HomepageForm({ initial, tours }: { initial: HomepageCont
 
           <SectionCard
             id="sec-highlights"
-            title="Chichen Itza Highlights section"
+            title="Dublin Highlights section"
             description="The dark trust/highlights band right below the hero."
             open={!!openSections["sec-highlights"]}
             onToggle={() => toggleSection("sec-highlights")}
@@ -559,27 +559,27 @@ export default function HomepageForm({ initial, tours }: { initial: HomepageCont
           </SectionCard>
 
           <SectionCard
-            id="sec-tower"
-            title="Waterfront Palaces & Mansions section"
+            id="sec-topsights"
+            title="Top Sights section"
             description="Images live on the Images tab."
-            open={!!openSections["sec-tower"]}
-            onToggle={() => toggleSection("sec-tower")}
+            open={!!openSections["sec-topsights"]}
+            onToggle={() => toggleSection("sec-topsights")}
           >
             <div className="grid gap-5 sm:grid-cols-2">
               <Field label="Eyebrow label">
-                <input value={content.sections.tower.eyebrow} onChange={(e) => updateTower({ eyebrow: e.target.value })} className={inputClass} />
+                <input value={content.sections.topSights.eyebrow} onChange={(e) => updateTopSights({ eyebrow: e.target.value })} className={inputClass} />
               </Field>
               <Field label="Heading (H2)">
-                <input value={content.sections.tower.heading} onChange={(e) => updateTower({ heading: e.target.value })} className={inputClass} />
+                <input value={content.sections.topSights.heading} onChange={(e) => updateTopSights({ heading: e.target.value })} className={inputClass} />
               </Field>
             </div>
             <Field label="Body text">
-              <RichTextEditor value={content.sections.tower.body} onChange={(html) => updateTower({ body: html })} />
+              <RichTextEditor value={content.sections.topSights.body} onChange={(html) => updateTopSights({ body: html })} />
             </Field>
             <Field label="Bullet points">
               <RepeatableList<string>
-                items={content.sections.tower.bullets}
-                onChange={(bullets) => updateTower({ bullets })}
+                items={content.sections.topSights.bullets}
+                onChange={(bullets) => updateTopSights({ bullets })}
                 newItem={() => ""}
                 addLabel="+ Add bullet"
                 renderItem={(item, upd) => (
@@ -589,10 +589,10 @@ export default function HomepageForm({ initial, tours }: { initial: HomepageCont
             </Field>
             <div className="grid gap-5 sm:grid-cols-2">
               <Field label="Button text">
-                <input value={content.sections.tower.ctaButtonText} onChange={(e) => updateTower({ ctaButtonText: e.target.value })} className={inputClass} />
+                <input value={content.sections.topSights.ctaButtonText} onChange={(e) => updateTopSights({ ctaButtonText: e.target.value })} className={inputClass} />
               </Field>
               <Field label="Button link">
-                <input value={content.sections.tower.ctaHref} onChange={(e) => updateTower({ ctaHref: e.target.value })} className={inputClass} />
+                <input value={content.sections.topSights.ctaHref} onChange={(e) => updateTopSights({ ctaHref: e.target.value })} className={inputClass} />
               </Field>
             </div>
           </SectionCard>
@@ -1009,7 +1009,7 @@ export default function HomepageForm({ initial, tours }: { initial: HomepageCont
                 )}
               </div>
               <div className="bg-stone-50 p-3">
-                <p className="truncate text-xs uppercase tracking-wide text-stone-400">bookchichenitzatour.com</p>
+                <p className="truncate text-xs uppercase tracking-wide text-stone-400">bookdaytripsfromdublintour.com</p>
                 <p className="mt-0.5 truncate text-sm font-semibold text-stone-900">{content.ogTitle || content.metaTitle || content.heroHeading}</p>
                 <p className="mt-0.5 line-clamp-2 text-xs text-stone-500">{(content.ogDescription || content.metaDescription || content.heroSubheading).replace(/<[^>]+>/g, "")}</p>
               </div>
@@ -1037,8 +1037,8 @@ export default function HomepageForm({ initial, tours }: { initial: HomepageCont
 
           <SectionCard title="Waterfront Palaces & Mansions photos">
             <RepeatableList<GalleryImage>
-              items={content.sections.tower.images}
-              onChange={(images) => updateTower({ images })}
+              items={content.sections.topSights.images}
+              onChange={(images) => updateTopSights({ images })}
               newItem={() => ({ src: "", alt: "", label: "" })}
               addLabel="+ Add photo"
               renderItem={(img, upd) => (
@@ -1060,7 +1060,7 @@ export default function HomepageForm({ initial, tours }: { initial: HomepageCont
         <div className="space-y-5">
           <SectionCard title="Focus keyword" description="The main phrase you want the homepage to rank for. Purely a writing aid — nothing here is sent to Google.">
             <Field label="Focus keyword">
-              <input value={content.focusKeyword} onChange={(e) => update("focusKeyword", e.target.value)} className={inputClass} placeholder="e.g. Chichen Itza tour" />
+              <input value={content.focusKeyword} onChange={(e) => update("focusKeyword", e.target.value)} className={inputClass} placeholder="e.g. Dublin tour" />
             </Field>
             {focusChecklist && (
               <ul className="space-y-1.5 rounded-xl border border-stone-200 bg-stone-50 p-4 text-sm">

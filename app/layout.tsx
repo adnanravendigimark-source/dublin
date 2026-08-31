@@ -23,24 +23,27 @@ const scriptFont = Alex_Brush({
 });
 
 const DEFAULT_OG_IMAGE =
-  "https://images.unsplash.com/photo-1518638150340-f706e86654de?q=80&w=2400&auto=format&fit=crop";
+  "https://images.unsplash.com/photo-1546986294-d9cdc4873420?q=80&w=2400&auto=format&fit=crop";
 
-// Google Analytics (GA4) measurement ID.
-const GA_MEASUREMENT_ID = "G-YFP0RWYX4J";
+// Google Analytics (GA4) measurement ID — PLACEHOLDER. Replace with this
+// site's own GA4 property ID before launch. Do not reuse another site's
+// ID or you'll mix both sites' traffic together (see README "Before you
+// launch").
+const GA_MEASUREMENT_ID = "G-XXXXXXXXXX";
 
 const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "Chichen Itza Tour & Tickets",
+  name: "Day Trips from Dublin",
   url: SITE_URL,
   description:
-    "Independent guide comparing certified guided Chichen Itza tours, early access tickets, and cenote excursions in Yucatan Mexico.",
+    "Independent guide comparing certified guided day trips from Dublin — the Cliffs of Moher, the Wicklow Mountains, and the Giant's Causeway — with round-trip coach transport included.",
 };
 
 const websiteJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  name: "Chichen Itza Tour & Tickets",
+  name: "Day Trips from Dublin",
   url: SITE_URL,
 };
 
@@ -50,22 +53,22 @@ export function generateMetadata(): Metadata {
   return {
     metadataBase: new URL(SITE_URL),
     title: {
-      default: "Chichen Itza Tour Tickets & Guided Excursions (2026)",
-      template: "%s | Chichen Itza Tour",
+      default: "Day Trips from Dublin | Dublin Day Trips (2026)",
+      template: "%s | Day Trips from Dublin",
     },
     description:
-      "Compare top-rated Chichen Itza tours from Cancun, Playa del Carmen & Tulum. Certified archeologist guides, Cenote Ik Kil swim, and early access options.",
+      "Compare the best guided day trips from Dublin — Cliffs of Moher, Wicklow Mountains & Glendalough, and the Giant's Causeway. Round-trip coach transport, local driver-guides, and free cancellation.",
     keywords: [
-      "Chichen Itza Tour",
-      "Chichen Itza Tickets",
-      "Chichen Itza guided tour",
-      "Chichen Itza day trip from Cancun",
-      "Chichen Itza tour from Playa del Carmen",
-      "Chichen Itza early access tour",
-      "Chichen Itza cenote tour",
-      "El Castillo pyramid tour",
-      "best Chichen Itza tour",
-      "Chichen Itza tickets 2026",
+      "Day Trips from Dublin",
+      "Dublin Day Trips",
+      "Dublin day trip tours",
+      "Cliffs of Moher day trip from Dublin",
+      "Wicklow Mountains day trip",
+      "Giant's Causeway day trip from Dublin",
+      "guided day trip from Dublin",
+      "Dublin coach tour",
+      "best day trips from Dublin",
+      "Dublin day trips 2026",
     ],
     alternates: {
       canonical: "/",
@@ -79,19 +82,19 @@ export function generateMetadata(): Metadata {
     },
     robots,
     openGraph: {
-      title: "Chichen Itza Tour Tickets | Guided Day Trips & Cenote Excursions",
+      title: "Day Trips from Dublin | Guided Day Trips & Coach Tours",
       description:
-        "Book certified guided Chichen Itza tours with hotel transport from Cancun, Playa del Carmen & Riviera Maya. Free cancellation up to 24h prior.",
+        "Book guided day trips from Dublin with round-trip coach transport and a local driver-guide included. Free cancellation up to 24h prior.",
       type: "website",
       url: SITE_URL,
-      siteName: "Chichen Itza Tour & Tickets",
-      images: [{ url: DEFAULT_OG_IMAGE, width: 2400, height: 1350, alt: "The majestic El Castillo pyramid at Chichen Itza Mayan ruins under golden sunlight" }],
+      siteName: "Day Trips from Dublin",
+      images: [{ url: DEFAULT_OG_IMAGE, width: 2400, height: 1350, alt: "The Cliffs of Moher along Ireland's Wild Atlantic Way under a dramatic sky" }],
     },
     twitter: {
       card: "summary_large_image",
-      title: "Chichen Itza Tour Tickets | Guided Day Trips & Cenote Excursions",
+      title: "Day Trips from Dublin | Guided Day Trips & Coach Tours",
       description:
-        "Book certified guided Chichen Itza tours with hotel transport from Cancun, Playa del Carmen & Riviera Maya. Free cancellation up to 24h prior.",
+        "Book guided day trips from Dublin with round-trip coach transport and a local driver-guide included. Free cancellation up to 24h prior.",
       images: [DEFAULT_OG_IMAGE],
     },
   };

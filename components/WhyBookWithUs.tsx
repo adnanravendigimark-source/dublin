@@ -1,6 +1,6 @@
 import { getHomepageContent } from "@/lib/homepage";
 
-export default async function RiverHighlights() {
+export default async function WhyBookWithUs() {
   const { sections } = await getHomepageContent();
   const s = sections.highlights;
 

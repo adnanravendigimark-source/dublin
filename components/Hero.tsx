@@ -3,7 +3,9 @@ import { getHomepageContent } from "@/lib/homepage";
 
 export default async function Hero() {
   const content = await getHomepageContent();
-  const heroImageSrc = content.heroImage || "/images/chichen-itza-hero.jpg";
+  const heroImageSrc =
+    content.heroImage ||
+    "https://images.unsplash.com/photo-1546986294-d9cdc4873420?q=80&w=2400&auto=format&fit=crop";
 
   return (
     <section className="relative w-full min-h-screen min-h-[100dvh] flex flex-col justify-center bg-[#F8F5EC] overflow-hidden">
@@ -11,40 +13,40 @@ export default async function Hero() {
       <div className="absolute inset-0 z-0 pointer-events-none">
         <SafeImage
           src={heroImageSrc}
-          alt={content.heroImageAlt || "The iconic El Castillo pyramid at Chichen Itza Mayan ruins in sunny Yucatan"}
+          alt={content.heroImageAlt || "The Cliffs of Moher along Ireland's Wild Atlantic Way under a dramatic sky"}
           fill
           priority
           quality={95}
           sizes="100vw"
           className="object-cover object-[80%_center] md:object-[78%_center] lg:object-right"
         />
-        {/* Atmospheric gradient overlay matching Mayan Ivory site background tone ensuring seamless flow */}
+        {/* Atmospheric gradient overlay matching the site's Warm Ivory background tone, ensuring seamless flow */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#F8F5EC]/95 via-[#F8F5EC]/80 via-50% to-transparent sm:bg-gradient-to-r sm:from-[#F8F5EC]/95 sm:via-[#F8F5EC]/75 sm:via-42% md:from-[#F8F5EC]/90 md:via-[#F8F5EC]/50 md:via-48% lg:via-50% md:to-transparent" />
       </div>
 
       {/* Hero Content Layer */}
       <div className="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-8 pt-16 sm:pt-24 lg:pt-32 pb-16 sm:pb-20 lg:pb-28 flex-1 flex flex-col justify-center">
         <div className="max-w-xl lg:max-w-2xl">
-          {/* Eyebrow in Mayan Gold */}
+          {/* Eyebrow in Celtic Gold */}
           <p className="text-xs sm:text-[13px] font-bold tracking-[0.2em] uppercase text-[#C58A2B]">
-            {content.heroBadge || "STEP INTO THE WONDER OF THE MAYA WORLD"}
+            {content.heroBadge || "IRELAND'S ICONIC LANDMARKS, ONE DAY AT A TIME"}
           </p>
 
           {/* Main Headline */}
           <h1 className="mt-2.5 font-serif text-4xl sm:text-5xl md:text-6xl lg:text-[64px] font-bold leading-[1.1] tracking-tight text-[#073B2A]">
-            {content.heroHeading || "Chichen Itza Tour"}
+            {content.heroHeading || "Day Trips from Dublin"}
           </h1>
 
           {/* Cursive / Calligraphy Script Subtitle */}
           <p className="mt-1 font-script text-4xl sm:text-5xl lg:text-6xl font-normal text-[#C58A2B] leading-tight">
-            Explore. Learn. Be Amazed.
+            Explore. Discover. Be Amazed.
           </p>
 
           {/* Subtitle / Description */}
           <p className="mt-3.5 text-base sm:text-lg lg:text-[19px] text-[#11261D] font-semibold leading-relaxed max-w-xl">
             {content.heroSubheading
               ? content.heroSubheading.replace(/<[^>]+>/g, " ")
-              : "Discover the ancient marvel of Chichen Itza with expert local guides and unforgettable experiences."}
+              : "Book the best guided day trips from Dublin with round-trip coach transport and a local driver-guide included."}
           </p>
 
           {/* Action Buttons */}

@@ -8,49 +8,53 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Chichen Itza official requested color palette
+        // Day Trips from Dublin — Emerald/Gold Irish palette. Class names
+        // below (stone/gold/emerald/maya/chichen/navy) are unchanged from
+        // the Chichen Itza repo this project was cloned from — renaming
+        // those identifiers is a purely cosmetic, zero-visual-effect
+        // change across 50+ files, so only the color VALUES were updated.
         stone: {
-          50: "#F8F5EC",   // Mayan Ivory
-          100: "#F2EDE1",
-          200: "#E7D9BF",  // Warm Sand
-          800: "#34453E",
-          900: "#26332D",  // Stone Charcoal
+          50: "#FAFAF6",   // Warm Ivory
+          100: "#F2F0E8",
+          200: "#E4E0D0",  // Warm Sand
+          800: "#26332D",
+          900: "#1B2B26",  // Charcoal Green
         },
         gold: {
-          400: "#D9A441",
-          500: "#C58A2B",  // Mayan Gold ⭐
-          600: "#A87220",
+          400: "#D9B53D",
+          500: "#C9A227",  // Celtic Gold ⭐
+          600: "#A8841C",
         },
         emerald: {
-          900: "#073B2A",  // Mayan Forest Green ⭐
-          800: "#0F4D37",
-          700: "#145A43",  // Jungle Green
+          900: "#0B2E23",  // Deep Forest ⭐
+          800: "#0F7A4A",  // Emerald Green
+          700: "#1B7A5A",  // Shamrock
         },
         maya: {
           forest: "rgb(var(--color-maya-forest) / <alpha-value>)",
           jungle: "rgb(var(--color-maya-jungle) / <alpha-value>)",
           ivory: "rgb(var(--color-maya-ivory) / <alpha-value>)",
           gold: "rgb(var(--color-maya-gold) / <alpha-value>)",
-          sand: "#E7D9BF",
-          sage: "#DCE7DC",
+          sand: "#E4E0D0",
+          sage: "#DCEAE3",
           charcoal: "rgb(var(--color-maya-charcoal) / <alpha-value>)",
           white: "#FFFFFF",
-          emerald: "rgb(var(--color-maya-forest) / <alpha-value>)",
-          dark: "#073B2A",
+          emerald: "rgb(var(--color-maya-emerald) / <alpha-value>)",
+          dark: "#0B2E23",
         },
         // Compatibility aliases for site components
         chichen: {
           navy: "rgb(var(--color-maya-forest) / <alpha-value>)",
-          ottoman: "#145A43",
+          ottoman: "#1B7A5A",
           gold: "rgb(var(--color-maya-gold) / <alpha-value>)",
           charcoal: "rgb(var(--color-maya-charcoal) / <alpha-value>)",
-          ivory: "#F8F5EC",
-          sky: "#DCE7DC",
-          sand: "#E7D9BF",
+          ivory: "#FAFAF6",
+          sky: "#DCEAE3",
+          sand: "#E4E0D0",
         },
         navy: {
-          900: "#073B2A",
-          800: "#145A43",
+          900: "#0B2E23",
+          800: "#1B7A5A",
         },
       },
       fontFamily: {

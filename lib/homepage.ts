@@ -66,7 +66,7 @@ export interface HighlightsSection {
   cards: HighlightCard[];
 }
 
-export interface TowerSection {
+export interface TopSightsSection {
   eyebrow: string;
   heading: string;
   body: string;
@@ -151,7 +151,7 @@ export interface HomepageSections {
   tours: TourSection;
   highlights: HighlightsSection;
   why: WhySection;
-  tower: TowerSection;
+  topSights: TopSightsSection;
   practical: PracticalSection;
   price: PriceSection;
   ctaBanner: CtaBannerSection;
@@ -221,16 +221,16 @@ export interface HomepageContent {
 
 export const DEFAULT_HEADER: HeaderContent = {
   logoImage: "",
-  logoAlt: "Chichen Itza Tours",
-  logoLine1: "CHICHEN ITZA",
-  logoLine2: "— TOURS —",
+  logoAlt: "Day Trips from Dublin",
+  logoLine1: "DAY TRIPS",
+  logoLine2: "— FROM DUBLIN —",
   homeLabel: "Home",
   bookNowText: "BOOK NOW",
   navLinks: [
     { label: "Home", href: "/" },
     { label: "Tours", href: "/#tours" },
     { label: "What to Expect", href: "/#what-to-expect" },
-    { label: "Things to Do", href: "/#palaces-mansions" },
+    { label: "Top Sights", href: "/#top-sights" },
     { label: "Blog", href: "/blog" },
     { label: "About Us", href: "/about" },
     { label: "Contact", href: "/contact" },
@@ -241,13 +241,13 @@ export const DEFAULT_HEADER: HeaderContent = {
 
 export const DEFAULT_FOOTER: FooterContent = {
   tagline:
-    "<strong>Independent booking guide.</strong> Not affiliated with INAH or the official Chichen Itza archeological park — we curate verified guided tours and day excursions from certified local Yucatan operators and earn a commission on bookings made through our links, at no extra cost to you.",
+    "<strong>Independent booking guide.</strong> Not affiliated with Fáilte Ireland or any single tour operator — we curate verified guided day trips from trusted Dublin-based coach operators and earn a commission on bookings made through our links, at no extra cost to you.",
   columns: [
     {
       title: "Explore",
       links: [
-        { label: "Chichen Itza Tours", href: "/#tours" },
-        { label: "Temples & Cenotes", href: "/#palaces-mansions" },
+        { label: "Dublin Day Trips", href: "/#tours" },
+        { label: "Top Sights", href: "/#top-sights" },
         { label: "Tour Prices", href: "/#prices" },
         { label: "FAQ", href: "/#faq" },
       ],
@@ -262,187 +262,187 @@ export const DEFAULT_FOOTER: FooterContent = {
       ],
     },
   ],
-  addressHeading: "Archeological Zone Location",
-  addressLine1: "Chichén Itzá, 97751 Pisté",
-  addressLine2: "Yucatán, Mexico",
+  addressHeading: "Departure Point",
+  addressLine1: "Central Dublin pickup points",
+  addressLine2: "Dublin, Ireland",
   copyrightText:
-    "Chichen Itza Tours. All prices shown in USD/EUR and subject to change by tour operators.",
+    "Day Trips from Dublin. All prices shown in EUR/USD and subject to change by tour operators.",
 };
 
 export const DEFAULT_THEME: ThemeColors = {
-  primary: "#C58A2B",   // Mayan Gold ⭐
-  secondary: "#073B2A", // Mayan Forest Green ⭐
-  dark: "#073B2A",      // Mayan Forest Green
-  accent: "#145A43",    // Jungle Green
+  primary: "#0F7A4A",   // Emerald Green ⭐
+  secondary: "#C9A227", // Celtic Gold ⭐
+  dark: "#0B2E23",      // Deep Forest
+  accent: "#1B7A5A",    // Shamrock (hover/lighter accent)
 };
 
 export const DEFAULT_SECTIONS: HomepageSections = {
   tours: {
-    eyebrow: "Chichen Itza Tours & Tickets",
-    heading: "Chichen Itza Guided Tours & Day Trips",
+    eyebrow: "Dublin Day Trips & Tours",
+    heading: "Day Trips from Dublin | Dublin Day Trips",
     subheading:
-      "Compare the top-rated guided excursions — all-inclusive day tours with cenote swimming, skip-the-crowd early access tours, Mayan ruins 3-in-1 combos, and private luxury experiences.",
+      "Compare the top-rated guided day trips from Dublin — the Cliffs of Moher & Galway, the Wicklow Mountains & Glendalough, and Giant's Causeway & Belfast, all with round-trip coach transport included.",
   },
   highlights: {
-    eyebrow: "Why Chichen Itza",
-    heading: "Chichen Itza Highlights",
+    eyebrow: "Why Book With Us",
+    heading: "Why Travel With Day Trips from Dublin",
     subheading:
-      "One of the New 7 Wonders of the World and a UNESCO World Heritage treasure. Here is what makes a guided tour unmissable.",
+      "Every tour is run by a licensed, insured Irish coach operator with a professional driver-guide — here's what makes booking with us easy.",
     cards: [
       {
-        title: "El Castillo Pyramid",
-        body: "The world-famous 365-step Temple of Kukulkan, engineered with astronomical precision to display a descending shadow serpent on the equinox.",
-        icon: "🏛️",
+        title: "Licensed Local Guides",
+        body: "Every coach is led by a professional driver-guide with deep local knowledge of Irish history, folklore, and hidden viewpoints.",
+        icon: "🎙️",
       },
       {
-        title: "Great Ball Court",
-        body: "The largest ancient Mesoamerican ball court ever discovered, featuring remarkable acoustic resonance where a whisper carries 500 feet.",
-        icon: "⚽",
+        title: "Comfortable Coach Travel",
+        body: "Modern, heated coaches with big windows for scenic views, free Wi-Fi on most routes, and door-to-door pickup from central Dublin.",
+        icon: "🚌",
       },
       {
-        title: "Sacred Cenote Swim",
-        body: "Plunge into crystal-clear turquoise underground sinkholes like Cenote Ik Kil, once revered by ancient Mayan royalty.",
-        icon: "🏊",
+        title: "Best Price Guarantee",
+        body: "We compare prices across trusted Irish tour operators so you always book the best available rate for the exact same trip.",
+        icon: "🛡️",
       },
       {
-        title: "Certified Archeologists",
-        body: "Explore with INAH-certified bilingual guides who bring ancient Mayan astronomy, hieroglyphs, math, and cosmology to life.",
-        icon: "📜",
+        title: "Free Cancellation",
+        body: "Plans change — most tours can be cancelled free of charge up to 24 hours before departure for a full refund.",
+        icon: "✅",
       },
     ],
   },
   why: {
-    eyebrow: "The Ruins Itinerary",
-    heading: "What You Actually See on a Chichen Itza Guided Tour",
+    eyebrow: "What to Expect",
+    heading: "What a Day Trip from Dublin Actually Looks Like",
     intro:
-      "Over 1,000 years of Mayan civilization across a vast 4-square-mile ancient metropolis. Here is the classic guided itinerary step by step.",
+      "Every day trip departs central Dublin by coach early in the morning and returns the same evening — no overnight stay needed. Here's a sample itinerary for our most popular tour, the Cliffs of Moher, Burren & Galway day trip.",
     timelineHeading: "Sample tour itinerary",
     timeline: [
-      { time: "0:00", step: "Arrive via priority tour entrance and meet your certified archeologist guide" },
-      { time: "0:20", step: "El Castillo (Pyramid of Kukulkan) — acoustic chirp echo and solar calendar alignment" },
-      { time: "0:50", step: "The Great Ball Court, Temple of the Jaguars & Skull Platform (Tzompantli)" },
-      { time: "1:20", step: "Temple of the Warriors & the Plaza of a Thousand Columns" },
-      { time: "1:50", step: "Cenote Sagrado (The Sacred Cenote of offerings and rituals)" },
-      { time: "2:20", step: "El Caracol Astronomical Observatory & Las Monjas (The Nunnery)" },
+      { time: "7:00 AM", step: "Depart central Dublin by coach, driving through Kildare and the Irish midlands" },
+      { time: "9:30 AM", step: "Scenic stop in the Burren — Ireland's otherworldly limestone karst landscape" },
+      { time: "10:45 AM", step: "Arrive at the Cliffs of Moher — 2 hours to walk the cliff-top trails and visitor centre" },
+      { time: "1:00 PM", step: "Traditional lunch stop in the seaside village of Liscannor or Doolin" },
+      { time: "2:30 PM", step: "Free time in Galway City — Latin Quarter, Galway Bay promenade & shopping" },
+      { time: "8:00 PM", step: "Return coach arrives back in central Dublin" },
     ],
     learnHeading: "Good to know before your tour",
     learn: [
-      "Certified archeologist guides are bilingual (English & Spanish) with audio headsets for clear listening",
-      "Round-trip air-conditioned hotel transport included from Cancun, Playa del Carmen, Tulum & Riviera Maya",
-      "All-inclusive tours feature a traditional Yucatan buffet lunch and swimming at Cenote Ik Kil",
-      "Climbing the pyramid is strictly prohibited to preserve the thousand-year-old structures",
+      "Professional driver-guides share Irish history, folklore, and local stories throughout the journey",
+      "Round-trip coach pickup is included from central Dublin meeting points — no car needed",
+      "Comfortable walking shoes and a waterproof jacket are recommended for all outdoor stops",
+      "Most tours run daily year-round, with earlier sunset return times in winter months",
     ],
-    note: "Itinerary order may vary slightly by tour operator to optimize weather, sunlight, and crowd flow.",
-    extraHeading: "Hotel Pickup Regions",
+    note: "Itinerary order and stop duration may vary slightly by tour operator to account for weather and traffic.",
+    extraHeading: "Dublin Pickup Points",
     extraItems: [
-      { name: "Cancun Hotel Zone & Downtown", note: "Daily pickup between 6:30 AM – 7:30 AM with direct highway express transport" },
-      { name: "Playa del Carmen & Riviera Maya", note: "Convenient pickup from all major coastal resorts and meeting points" },
-      { name: "Tulum & Akumal", note: "Morning departures with scenic inland route through the Yucatan jungle" },
+      { name: "Dublin City Centre", note: "Central meeting points near O'Connell Street and major hotels" },
+      { name: "Dublin Bus & Rail Stations", note: "Convenient pickup near Busáras and Dublin's main rail stations" },
+      { name: "Select Dublin Hotels", note: "Some tours offer direct hotel pickup — check each listing for details" },
     ],
-    ctaText: "Ready to explore? The All-Inclusive Chichen Itza Tour starts at $69/person and departs daily.",
-    ctaButtonText: "Book Your Chichen Itza Tour →",
+    ctaText: "Ready to explore? Day trips from Dublin start from €45/person and depart daily.",
+    ctaButtonText: "Book Your Dublin Day Trip →",
     ctaHref: "#tours",
   },
-  tower: {
-    eyebrow: "Temples & Sacred Cenotes",
-    heading: "Explore Ancient Pyramids & Plunge into Sacred Waters",
+  topSights: {
+    eyebrow: "Top Sights",
+    heading: "The Landmarks You'll See on a Dublin Day Trip",
     body:
-      "No trip to the Yucatan is complete without exploring both the monumental limestone temples of Chichen Itza and the mystical turquoise waters of the underground cenotes. <strong>El Castillo</strong>, the Temple of the Warriors, and <strong>Cenote Ik Kil</strong> showcase the astonishing spiritual and architectural harmony of the ancient Mayan civilization.",
+      "From the wild Atlantic cliffs of County Clare to the ancient monastic ruins of the Wicklow Mountains and the volcanic coastline of Northern Ireland, a day trip from Dublin puts Ireland's most iconic landmarks within easy reach. <strong>The Cliffs of Moher</strong>, <strong>Glendalough</strong>, and the <strong>Giant's Causeway</strong> are the three sights most first-time visitors don't want to miss.",
     bullets: [
-      "El Castillo was constructed with 365 steps corresponding precisely to the solar calendar",
-      "Cenote Ik Kil plunge pool features hanging lush jungle vines and 85-foot deep crystal waters",
-      "Morning departures give you cool temperatures and crowd-free photo angles",
-      "All-inclusive tours include certified guide, transport, cenote entry, and Yucatan buffet",
+      "The Cliffs of Moher rise 214 metres above the Atlantic and stretch for 8km along the Wild Atlantic Way",
+      "Glendalough's 6th-century monastic settlement sits between two glacial lakes in the Wicklow Mountains",
+      "The Giant's Causeway's 40,000 interlocking basalt columns are a UNESCO World Heritage Site",
+      "Every guided day trip includes transport, a driver-guide, and free time to explore each stop",
     ],
-    ctaButtonText: "See All Chichen Itza Tours",
+    ctaButtonText: "See All Dublin Day Trips",
     ctaHref: "#tours",
     images: [
       {
-        src: "/images/chichen-itza-hero.jpg",
-        alt: "El Castillo pyramid at Chichen Itza in daylight",
-        label: "El Castillo Pyramid",
+        src: "https://images.unsplash.com/photo-1758053333623-cc472d4c971a?q=80&w=1200&auto=format&fit=crop",
+        alt: "The Cliffs of Moher rising above the Atlantic Ocean in County Clare, Ireland",
+        label: "Cliffs of Moher",
       },
       {
-        src: "/images/cenote-ik-kil.jpg",
-        alt: "Cenote Ik Kil near Chichen Itza",
-        label: "Cenote Ik Kil",
+        src: "https://images.unsplash.com/photo-1666626755396-6ee8844029e2?q=80&w=1200&auto=format&fit=crop",
+        alt: "Glendalough monastic ruins and round tower beside a lake in the Wicklow Mountains",
+        label: "Glendalough",
       },
       {
-        src: "/images/warriors-temple.jpg",
-        alt: "Temple of the Warriors and columns at Chichen Itza",
-        label: "Temple of Warriors",
+        src: "https://images.unsplash.com/photo-1530473744149-142a02a2d565?q=80&w=1200&auto=format&fit=crop",
+        alt: "The hexagonal basalt columns of the Giant's Causeway on the Antrim coast",
+        label: "Giant's Causeway",
       },
       {
-        src: "/images/great-ball-court.jpg",
-        alt: "The Great Ball Court at Chichen Itza",
-        label: "Great Ball Court",
+        src: "https://images.unsplash.com/photo-1692804238058-53c0fbcefe09?q=80&w=1200&auto=format&fit=crop",
+        alt: "Colorful shopfronts on a cobblestone street in Galway City, Ireland",
+        label: "Galway City",
       },
     ],
   },
   practical: {
-    hoursHeading: "Park Hours & Tour Timing (2026)",
+    hoursHeading: "Departure Times & Tour Timing (2026)",
     hours: [
-      { range: "Chichén Itzá Park Gates", time: "8:00 AM – 5:00 PM daily (Last admission at 4:00 PM)" },
-      { range: "Early Access Tours", time: "6:00 AM – 7:00 AM hotel pickup (Entry right at 8:00 AM opening)" },
-      { range: "Classic All-Inclusive Tours", time: "7:00 AM – 8:00 AM hotel pickup (10–12 hour full-day tour)" },
-      { range: "Cenote Ik Kil Swimming Hours", time: "9:00 AM – 5:00 PM daily" },
+      { range: "Cliffs of Moher, Burren & Galway", time: "7:00 AM – 8:00 PM (approx. 12–13 hours, full day)" },
+      { range: "Wicklow Mountains & Glendalough", time: "9:00 AM – 6:00 PM (approx. 9 hours, full day)" },
+      { range: "Giant's Causeway & Belfast", time: "6:30 AM – 9:30 PM (approx. 14–15 hours, full day)" },
+      { range: "Half-day Wicklow options", time: "9:00 AM – 2:00 PM or 1:00 PM – 6:00 PM (approx. 5 hours)" },
     ],
-    hoursNote: "Exact hotel pickup time and meeting point will be confirmed in your booking voucher.",
-    addressHeading: "Location & Pickup Points",
+    hoursNote: "Exact pickup time and meeting point will be confirmed in your booking voucher.",
+    addressHeading: "Departure Point & Pickup",
     address:
-      "Chichén Itzá Archeological Zone, Highway 180D, 97751 Pisté, Tinum, Yucatán, Mexico.\nHotel pickup included from Cancun (Hotel Zone/Downtown), Playa del Carmen, Riviera Maya, Tulum, and Merida.",
-    metro: "Air-conditioned round-trip transport is included with all guided tour bookings.",
-    bestTimeHeading: "Best Time for a Chichen Itza Tour",
+      "All tours depart from central Dublin, with pickup points near O'Connell Street, Busáras, and Dublin's main rail stations.\nSome operators also offer direct pickup from select Dublin city centre hotels.",
+    metro: "Round-trip coach transport from Dublin is included with every guided day trip booking.",
+    bestTimeHeading: "Best Time for a Dublin Day Trip",
     bestTimeBody:
-      "Early morning between 8:00 AM and 10:30 AM offers the coolest temperatures and the fewest crowds. November through April provides ideal dry, sunny weather across the Yucatan Peninsula.",
+      "May through September offers the longest daylight hours and mildest weather for outdoor sightseeing. Ireland's weather is changeable year-round, so a waterproof jacket is recommended on every tour regardless of season.",
   },
   price: {
     eyebrow: "Compare & Choose",
-    heading: "Compare Chichen Itza Tours & Tickets",
+    heading: "Compare Dublin Day Trips",
     subheading:
-      "All four options side by side — pick the tour that matches your schedule, then book straight from the table.",
+      "All three tours side by side — pick the day trip that matches your schedule, then book straight from the table.",
     note: "Children and infants typically receive discounted rates — check each tour's booking page for age tiers.",
     itemLabel: "Tour Type",
     priceLabel: "Price",
     column1Label: "Duration",
-    column2Label: "Cenote & Meal Included",
+    column2Label: "Transport & Guide Included",
     bestForLabel: "Best For",
     bookLabel: "Book Tour",
   },
   ctaBanner: {
-    heading: "Ready to Experience Chichen Itza?",
-    subtext: "Book your certified guided tour today and discover the wonder of the ancient Mayan civilization with instant confirmation.",
+    heading: "Ready for Your Day Trip from Dublin?",
+    subtext: "Book your guided day trip today and discover Ireland's most iconic landmarks with instant confirmation.",
     buttonText: "Explore All Tours",
     buttonHref: "#tours",
   },
   faq: {
     eyebrow: "Frequently Asked Questions",
-    heading: "Chichen Itza Tour FAQs",
+    heading: "Dublin Day Trips FAQs",
   },
   notFound: {
-    heading: "Looks like this ancient temple path is lost in the jungle.",
+    heading: "Looks like this road took a wrong turn in the Wicklow Mountains.",
     body: "The page you're looking for doesn't exist or may have moved. Try one of these instead.",
-    primaryButtonText: "Compare Chichen Itza Tours & Tickets →",
+    primaryButtonText: "Compare Dublin Day Trips →",
     primaryButtonHref: "/#tours",
     secondaryButtonText: "Read the Travel Guide",
     secondaryButtonHref: "/blog",
   },
   blogTeaser: {
     eyebrow: "From the Blog",
-    heading: "Chichen Itza Tour Guides & Tips",
+    heading: "Dublin Day Trip Guides & Tips",
     subheading:
-      "Expert travel advice on picking the right tour, beating the heat and crowds, and planning your Yucatan day trip.",
+      "Expert travel advice on picking the right tour, what to pack, and planning the perfect day trip from Dublin.",
     viewAllText: "View All Articles",
     readArticleText: "Read Article",
   },
   blogPage: {
-    eyebrow: "Chichen Itza Travel Blog",
-    heading: "Chichen Itza Tour & Travel Guide",
-    subheading: "Practical guides, itinerary tips, and historical insights to help you plan the ultimate Yucatan ruins adventure.",
+    eyebrow: "Dublin Day Trips Travel Blog",
+    heading: "Dublin Day Trip & Travel Guide",
+    subheading: "Practical guides, itinerary tips, and travel insights to help you plan the ultimate day trip from Dublin.",
     emptyStateText: "No articles published yet — check back soon.",
     featuredLinkText: "Read the guide",
-    ctaHeading: "Ready to book your Chichen Itza Tour?",
-    ctaButtonText: "Compare Chichen Itza Tours & Tickets →",
+    ctaHeading: "Ready to book your Dublin day trip?",
+    ctaButtonText: "Compare Dublin Day Trips →",
     backToGuidesText: "← All guides",
     quickAnswerLabel: "Quick Answer",
     tocLabel: "In This Guide",
@@ -455,23 +455,23 @@ export const DEFAULT_SECTIONS: HomepageSections = {
 };
 
 const DEFAULT_HOMEPAGE_CONTENT: HomepageContent = {
-  heroBadge: "STEP INTO THE WONDER OF THE MAYA WORLD",
-  heroHeading: "Chichen Itza Tour",
+  heroBadge: "IRELAND'S ICONIC LANDMARKS, ONE DAY AT A TIME",
+  heroHeading: "Day Trips from Dublin",
   heroSubheading:
-    "Discover the ancient marvel of Chichen Itza with expert local guides and unforgettable experiences.",
-  heroImage: "/images/chichen-itza-hero.jpg",
-  heroImageAlt: "The iconic El Castillo pyramid at Chichen Itza Mayan ruins in sunny Yucatan",
+    "Book the best guided day trips from Dublin — the Cliffs of Moher, the Wicklow Mountains, and the Giant's Causeway — with round-trip coach transport and a local driver-guide included.",
+  heroImage: "https://images.unsplash.com/photo-1546986294-d9cdc4873420?q=80&w=2400&auto=format&fit=crop",
+  heroImageAlt: "The Cliffs of Moher along Ireland's Wild Atlantic Way under a dramatic sky",
   heroCtaPrimaryText: "EXPLORE TOURS",
   heroCtaPrimaryHref: "#tours",
-  heroCtaSecondaryText: "VIEW PRIVATE TOURS",
+  heroCtaSecondaryText: "VIEW ALL DAY TRIPS",
   heroCtaSecondaryHref: "#tours",
   showFeaturedTour: true,
-  featuredTourId: "chichen-itza-cenote-valladolid-all-inclusive-tour",
+  featuredTourId: "cliffs-of-moher-burren-galway-day-trip",
   featuredBadgeLabel: "Recommended",
   featuredUrgencyText: "Best Price Guarantee · High Demand",
   featuredReasons: [
-    "Most booked Chichen Itza Tour — 24,800+ reviews with 4.85-star rating",
-    "Includes certified archeologist guide, Cenote Ik Kil swim & buffet lunch",
+    "Most booked Dublin day trip — thousands of verified 5-star reviews",
+    "Includes round-trip coach transport, driver-guide, and free time in Galway City",
     "Free cancellation up to 24 hours before departure",
   ],
   sections: DEFAULT_SECTIONS,
@@ -480,7 +480,7 @@ const DEFAULT_HOMEPAGE_CONTENT: HomepageContent = {
   theme: DEFAULT_THEME,
   metaTitle: "",
   metaDescription: "",
-  focusKeyword: "Chichen Itza Tour",
+  focusKeyword: "Day Trips from Dublin | Dublin Day Trips",
   noIndex: false,
   noFollow: false,
   canonicalUrl: "",
@@ -536,7 +536,7 @@ function rowToHomepage(row: any): HomepageContent {
       tours: { ...DEFAULT_SECTIONS.tours, ...sectionsRaw.tours },
       highlights: { ...DEFAULT_SECTIONS.highlights, ...sectionsRaw.highlights },
       why: { ...DEFAULT_SECTIONS.why, ...sectionsRaw.why },
-      tower: { ...DEFAULT_SECTIONS.tower, ...sectionsRaw.tower },
+      topSights: { ...DEFAULT_SECTIONS.topSights, ...sectionsRaw.topSights },
       practical: { ...DEFAULT_SECTIONS.practical, ...sectionsRaw.practical },
       price: { ...DEFAULT_SECTIONS.price, ...sectionsRaw.price },
       ctaBanner: { ...DEFAULT_SECTIONS.ctaBanner, ...sectionsRaw.ctaBanner },

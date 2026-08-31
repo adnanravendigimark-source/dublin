@@ -17,9 +17,9 @@ export interface BlogSeoSettings {
 }
 
 const DEFAULT_SETTINGS: BlogSeoSettings = {
-  metaTitle: "Chichen Itza Guides & Tips | Chichen Itza Tour & Tickets",
+  metaTitle: "Dublin Day Trip Guides & Tips | Day Trips from Dublin",
   metaDescription:
-    "Practical guides for touring Chichen Itza in Yucatan — guided vs. self-guided tours, best time to go, cenote add-ons, and more.",
+    "Practical guides for day trips from Dublin — what to pack, best time to go, tour comparisons, and more.",
   canonicalUrl: "",
   noIndex: false,
   noFollow: false,

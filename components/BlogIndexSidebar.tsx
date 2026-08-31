@@ -18,9 +18,9 @@ export default function BlogIndexSidebar({
   onSelectCategory,
   searchQuery,
   onSearchChange,
-  ctaHeading = "Ready to book your Chichen Itza Tour?",
-  ctaBody = "Best tour prices, certified archeologist guides, and free cancellation on most tickets.",
-  ctaButtonText = "Compare Chichen Itza Tours & Tickets →",
+  ctaHeading = "Ready to book your Dublin Day Trip?",
+  ctaBody = "Best tour prices, licensed local guides, and free cancellation on most tours.",
+  ctaButtonText = "Compare Day Trips from Dublin & Tickets →",
 }: {
   posts: Post[];
   categories: { name: string; count: number }[];
