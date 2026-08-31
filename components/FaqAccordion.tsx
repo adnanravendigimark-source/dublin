@@ -24,7 +24,7 @@ export default function FaqAccordion({ faqs }: { faqs: FAQ[] }) {
               type="button"
               onClick={() => setOpenIndex(open ? null : i)}
               aria-expanded={open}
-              className="flex w-full cursor-pointer list-none items-center justify-between gap-3 p-5 text-left font-semibold text-chichen-navy sm:p-5.5"
+              className="flex w-full cursor-pointer list-none items-center justify-between gap-3 p-5 text-left font-semibold text-chichen-navy sm:p-6"
             >
               <span className="font-display text-[14.5px] sm:text-base font-bold pr-3">{f.question}</span>
               <span
@@ -37,7 +37,7 @@ export default function FaqAccordion({ faqs }: { faqs: FAQ[] }) {
             </button>
             {open && (
               <div
-                className="rich-content border-t border-stone-100 px-5 pb-5 pt-3 text-xs sm:text-[13px] leading-relaxed text-stone-900/80 sm:px-5.5"
+                className="rich-content border-t border-stone-100 px-5 pb-5 pt-3 text-xs sm:text-[13px] leading-relaxed text-stone-900/80 sm:px-6"
                 dangerouslySetInnerHTML={{ __html: f.answer }}
               />
             )}
