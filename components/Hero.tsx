@@ -28,10 +28,10 @@ export default async function Hero() {
       <div className="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 flex-1 flex flex-col justify-between pt-20 sm:pt-24 lg:pt-28 pb-4 sm:pb-6">
         {/* Top Content Area */}
         <div className="max-w-2xl my-auto py-2 sm:py-4">
-          {/* Script Tagline with subtle Irish Gold underline */}
+          {/* Script Tagline with subtle Irish Gold underline — admin-editable (Homepage → Content → Hero → "Hero badge") */}
           <div className="inline-block relative">
             <p className="font-script text-2xl sm:text-3xl lg:text-[32px] text-[#075E4A] leading-tight">
-              Explore More. Travel Beyond.
+              {content.heroBadge || "Explore More. Travel Beyond."}
             </p>
             {/* Subtle curved underline stroke */}
             <svg
@@ -49,10 +49,9 @@ export default async function Hero() {
             </svg>
           </div>
 
-          {/* Main Headline */}
-          <h1 className="mt-1.5 sm:mt-2 font-serif text-3xl sm:text-5xl lg:text-[52px] font-bold leading-[1.1] sm:leading-[1.08] tracking-tight text-[#0D4F43]">
-            Day Trips<br />
-            from Dublin
+          {/* Main Headline — admin-editable (Homepage → Content → Hero → "Hero headline") */}
+          <h1 className="mt-1.5 sm:mt-2 whitespace-pre-line font-serif text-3xl sm:text-5xl lg:text-[52px] font-bold leading-[1.1] sm:leading-[1.08] tracking-tight text-[#0D4F43]">
+            {content.heroHeading || "Day Trips from Dublin"}
           </h1>
 
           {/* Catchphrase Subheading */}
