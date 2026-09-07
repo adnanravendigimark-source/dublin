@@ -28,9 +28,12 @@ export default async function Hero() {
       <div className="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 flex-1 flex flex-col justify-between pt-20 sm:pt-24 lg:pt-28 pb-4 sm:pb-6">
         {/* Top Content Area */}
         <div className="max-w-2xl my-auto py-2 sm:py-4">
-          {/* Script Tagline with subtle Irish Gold underline — admin-editable (Homepage → Content → Hero → "Hero badge") */}
+          {/* Eyebrow Badge with subtle Irish Gold underline — admin-editable (Homepage → Content → Hero → "Hero badge").
+              Uses a plain bold uppercase label (matching the eyebrow style used elsewhere on the
+              site) rather than the script font, since the script face is illegible for longer
+              all-caps admin copy like "IRELAND'S ICONIC LANDMARKS, ONE DAY AT A TIME". */}
           <div className="inline-block relative">
-            <p className="font-script text-2xl sm:text-3xl lg:text-[32px] text-[#075E4A] leading-tight">
+            <p className="text-xs sm:text-sm font-bold uppercase tracking-[0.15em] text-[#075E4A] leading-snug max-w-md">
               {content.heroBadge || "Explore More. Travel Beyond."}
             </p>
             {/* Subtle curved underline stroke */}
@@ -38,7 +41,7 @@ export default async function Hero() {
               viewBox="0 0 160 12"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              className="w-24 sm:w-32 lg:w-36 h-2 text-[#D9A441] -mt-1 opacity-90"
+              className="w-24 sm:w-32 lg:w-36 h-2 text-[#D9A441] mt-1 opacity-90"
             >
               <path
                 d="M2 7C40 2, 100 2, 158 8"
